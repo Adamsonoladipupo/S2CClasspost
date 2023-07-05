@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+            /* background-color: black; */
+        }
+        .hide{
+            display: none;
+        }
+        .loader{
+            background-color: white;
+            width: 100%;
+            height: 100vh;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .circle{
+            
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border-top:3px solid black ;
+            animation-name: loader;
+            animation-iteration-count: infinite;
+            animation-play-state: running;
+            animation-fill-mode: forwards;
+            animation-duration: 1s;
+
+        }
+        @keyframes loader{
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="loader">
+        <div class="circle">
+    </div>
+    </div>
+
+
+
+
+
+    <script>
+        var loder = document.querySelector(".laoder")
+        window.addEventListener("load", function(){});
+    </script>
+
+</body>
+</html>
