@@ -3,64 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="signup.css"> -->
     <style>
-        *{
-            padding: 0px;
-            margin: 0px;
-            box-sizing: border-box;
-            /* background-color: black; */
+        body{
+            background-color: rgb(240, 238, 238);
         }
-        .hide{
-            display: none;
-        }
-        .loader{
-            background-color: white;
-            width: 100%;
-            height: 100vh;
-            border-radius: 50%;
+        nav{
             display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .circle{
-            
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            border-top:3px solid black ;
-            animation-name: loader;
-            animation-iteration-count: infinite;
-            animation-play-state: running;
-            animation-fill-mode: forwards;
-            animation-duration: 1s;
+            justify-content: space-between;
+            align-items: end;
+            padding:2% 5%;
+            background-color: ;
 
         }
-        @keyframes loader{
-            0%{
-                transform: rotate(0deg);
-            }
-            100%{
-                transform: rotate(360deg);
-            }
+        form{
+            padding:  2%;
+            background-color: white;
+            margin: 0% 5%;
+            border-radius: 25px;
+            /* box-shadow: 1px 1px 5px 0.5px ; */
         }
+        fieldset{
+            border-radius: 10px;
+            margin: 2% 0%;
+            border: 1px solid orange;
+
+            border-collapse: collapse;
+            
+            transition-duration: .15s;
+            transition-property: color;
+            transition: 2s;
+        }
+
+        fieldset.textField{
+            border-style: none;
+            transition: 2s;
+
+        }
+        
+        fieldset.textField:hover {
+            display: block;
+        }
+        input{
+            padding: 12px;
+            border-radius: 10px;
+            border-width: 1px;
+            border-color: orange;
+
+        }
+        .button{
+            padding: 10px 30px;
+            border-radius: 10px;
+            transition: 1s;
+            background-color: white;
+        }
+        .button:hover{
+            background-color: orange;
+            color: white;
+        }
+        
+       
     </style>
     <title>Document</title>
 </head>
 <body>
-    
-    <div class="loader">
-        <div class="circle">
-    </div>
-    </div>
+    <nav class="navbar">
+        <img src="logo.png" alt="logo" width="35px">
+        <p>have an account?<a href="signin.html">Log in</a></p>
+    </nav>
+    <form action="">
+        <div>
+            <h5>Create Account</h5>
+            <p>Let's get you started! This will only take a few minutes</p>
+        </div>
+        <fieldset>
+            <legend>Select country (currency)</legend>
+            <input type="text" placeholder="Nigeria">
+        </fieldset>
+        <p>You are creating a Nigeria account <a href="signup1.html">change</a></p>
 
+        <fieldset class="textField" ><input type="text" placeholder="Username" required="required" ></fieldset>
 
+        <fieldset class="textField"><input type="text" placeholder="Email address" required="required"></fieldset>
 
+        <fieldset class="textField" ><input type="password" placeholder="Password" required="required"></fieldset>
 
-
-    <script>
-        var loder = document.querySelector(".laoder")
-        window.addEventListener("load", function(){});
-    </script>
-
+        <input type="submit" value="submit" class="button">
+    </form>
 </body>
 </html>
