@@ -3,92 +3,142 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="signup.css"> -->
     <style>
-        body{
-            background-color: rgb(240, 238, 238);
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+            color: orangered;
         }
         nav{
             display: flex;
-            justify-content: space-between;
-            align-items: end;
-            padding:2% 5%;
-            background-color: ;
-
+            justify-content: space-evenly;
+            align-items: center;
+            padding-top: 10px;
+            width: 300px;
         }
-        form{
-            padding:  2%;
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: gainsboro;
+        }
+        .form{
             background-color: white;
-            margin: 0% 5%;
-            border-radius: 25px;
-            /* box-shadow: 1px 1px 5px 0.5px ; */
+            margin: 20px;
+            /* margin-top: 10px; */
+            padding: 20px;
+            border-radius: 5px;
+            position: relative;
         }
-        fieldset{
-            border-radius: 10px;
-            margin: 2% 0%;
-            border: 1px solid orange;
-
-            border-collapse: collapse;
+        .inputBox{
+            padding-top: 15px;
+            position: relative;
+            width: 350px;
             
-            transition-duration: .15s;
-            transition-property: color;
-            transition: 2s;
         }
-
-        fieldset.textField{
-            border-style: none;
-            transition: 2s;
-
+        .inputBox input{
+            width: 100%;
+            padding: 10px;
+            border: 1px solid orangered;
+            border-radius: 5px;
+            outline: none;
+            color: orangered;
+            font-size: 1em;
+            
         }
-        
-        fieldset.textField:hover {
-            display: block;
+        .inputBox span{
+            position: absolute;
+            left: 0;
+            padding: 10px;
+            pointer-events: none;
+            font-size: 01em;
+            color: orangered;
+            transition: 0.5s;
         }
-        input{
-            padding: 12px;
-            border-radius: 10px;
-            border-width: 1px;
-            border-color: orange;
-
-        }
-        .button{
-            padding: 10px 30px;
-            border-radius: 10px;
-            transition: 1s;
+        .inputBox input:valid ~ span,
+        .inputBox input:focus ~ span{
+            color: orangered;
+            transform: translateX(10px) translateY(-7px);
+            font-size: 0.65em;
+            padding: 0 5px;
             background-color: white;
+            /* border-left: 1px solid;
+            border-right: 1px solid; */
+            
         }
-        .button:hover{
-            background-color: orange;
+        .submitButton{
+            padding: 10px;
+            margin-top: 10px;
+            border: 1px solid orangered;
+            border-radius: 5px;
+            background-color: orangered;
             color: white;
+
+            
         }
-        
-       
     </style>
     <title>Document</title>
 </head>
 <body>
-    <nav class="navbar">
+    <nav>
         <img src="logo.png" alt="logo" width="35px">
-        <p>have an account?<a href="signin.html">Log in</a></p>
+        <p>Have an account?<a href="#">  Log in</a></p>
     </nav>
-    <form action="">
-        <div>
-            <h5>Create Account</h5>
-            <p>Let's get you started! This will only take a few minutes</p>
-        </div>
-        <fieldset>
-            <legend>Select country (currency)</legend>
-            <input type="text" placeholder="Nigeria">
-        </fieldset>
-        <p>You are creating a Nigeria account <a href="signup1.html">change</a></p>
-
-        <fieldset class="textField" ><input type="text" placeholder="Username" required="required" ></fieldset>
-
-        <fieldset class="textField"><input type="text" placeholder="Email address" required="required"></fieldset>
-
-        <fieldset class="textField" ><input type="password" placeholder="Password" required="required"></fieldset>
-
-        <input type="submit" value="submit" class="button">
-    </form>
+    <div class="form">
+        <form action="" method="get">
+            <h3>Create Account</h3>
+            <p>Let's get you started in few minutes!.</p>
+            <div class="inputBox">
+                <input type="text" required="required">
+                <span>Legal First Name</span>
+            </div>
+            <div class="inputBox">
+                <input type="email" required="required">
+                <span>Email Address</span>
+            </div>
+            <div class="inputBox">
+                <input type="number" required="required">
+                <span>WhatApp Number</span>
+            </div>
+            <div class="inputBox">
+                <input type="password" required="required">
+                <span>Password</span>
+            </div>
+            <div class="inputBox">
+                <input type="password" required="required">
+                <span>Pin (4 digits)</span>
+            </div>
+            <div class="inputBox">
+                <input type="number" >
+                <span>Referral ID (Optional)</span>
+            </div>
+            <div class="inputBox">
+                <input type="text">
+                <span>Referral Name (Optional)</span>
+            </div>
+            <div class="inputBox">
+                <input list="OnlinePlatform" name="OnlinePlatform" required="required">
+                <datalist id="OnlinePlatform">
+                    <option value="Twitter"></option>
+                    <option value="Facebook"></option>
+                    <option value="Google"></option>
+                    <option value="Instagram"></option>
+                    <option value="LinkedIn"></option>
+                    <option value="WhatsApp"></option>
+                    <option value="YouTube"></option>
+                    <option value="From a friend"></option>
+                    <option value="Others"></option>
+                </datalist>
+                <span>How did you hear about us?</span>
+            </div>
+            <div  style="display: flex; padding-top: 10px;">
+                <input type="checkbox" required="required"><p style="padding-left: 10px;">I have read and I agree to the T&C</p>
+            </div>
+            <input type="submit" value="GET STARTED" class="submitButton">
+        </form>
+    </div>
 </body>
 </html>
