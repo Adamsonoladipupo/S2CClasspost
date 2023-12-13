@@ -23,7 +23,8 @@
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            background-color: gainsboro;
+            background-color: white;
+            
         }
         .form{
             background-color: white;
@@ -32,6 +33,8 @@
             padding: 20px;
             border-radius: 5px;
             position: relative;
+            box-shadow: 3px 3px 10px 1px grey;
+            
         }
         .inputBox{
             padding-top: 15px;
@@ -79,12 +82,18 @@
 
             
         }
+            input::-webkit-outer-spin-button,
+            input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
     </style>
     <title>Document</title>
 </head>
 <body>
     <nav>
-        <img src="logo.png" alt="logo" width="35px">
+        <img src="logo.png" alt="logo" width="35px" height="35px">
         <p>Have an account?<a href="#">  Log in</a></p>
     </nav>
     <div class="form">
@@ -96,11 +105,15 @@
                 <span>Legal First Name</span>
             </div>
             <div class="inputBox">
+                <input type="text" required="required">
+                <span>Legal Surame</span>
+            </div>
+            <div class="inputBox">
                 <input type="email" required="required">
                 <span>Email Address</span>
             </div>
             <div class="inputBox">
-                <input type="number" required="required">
+                <input type="number" required="required" >
                 <span>WhatApp Number</span>
             </div>
             <div class="inputBox">
@@ -112,7 +125,7 @@
                 <span>Pin (4 digits)</span>
             </div>
             <div class="inputBox">
-                <input type="number" >
+                <input type="text" >
                 <span>Referral ID (Optional)</span>
             </div>
             <div class="inputBox">
