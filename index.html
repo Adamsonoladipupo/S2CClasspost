@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         *{
             margin: 0;
@@ -52,6 +53,16 @@
             color: black;
             font-size: 1em;
             
+        }
+        .password-container{
+
+        }
+        .fa-eye{
+            position: absolute;
+            top: 30px;
+            right: 5%;
+            cursor: pointer;
+            color: #616161;
         }
         .inputBox span{
             position: absolute;
@@ -118,11 +129,13 @@
                 <span>WhatApp Number</span>
             </div>
             <div class="inputBox">
-                <input type="password" required="required">
+                <input type="password" required="required" id="passwordInput">
+                <i class="fa-solid fa-eye" id="toggleBtn"></i>
                 <span>Password</span>
             </div>
-            <div class="inputBox">
-                <input type="password" required="required">
+            <div class="inputBox password-container">
+                <input type="password" required="required" maxlength="4" size="4" id="passwordInput" name="password">
+                <i class="fa-solid fa-eye" id="toggleBtn"></i>
                 <span>Pin (4 digits)</span>
             </div>
             <div class="inputBox">
@@ -149,10 +162,30 @@
                 <span>How did you hear about us?</span>
             </div>
             <div  style="display: flex; padding-top: 10px;">
-                <input type="checkbox" required="required"><p style="padding-left: 10px;">I have read and I agree to the T&C</p>
+                <input type="checkbox" required="required"><p style="padding-left: 10px;">I have read and I agree to the <a href="https://gosub.ng/terms-and-conditions">T&C</a></p>
             </div>
             <input type="submit" value="GET STARTED" class="submitButton">
         </form>
     </div>
+
+
+
+
+    <script src="script.js"></script>
+    <script>
+        const passwordInput = document.getElementById('passwordInput');
+        const toggleBtn = document.getElementById('toggleBtn');
+        
+        toggleBtn.addEventListener('click', function() {
+          if (passwordInput.type === 'text') {
+            passwordInput.type = 'password';
+            toggleBtn.textContent = '';
+          } else {
+            passwordInput.type = 'text';
+            toggleBtn.textContent = '';
+          }
+        });
+        </script>
+
 </body>
 </html>
