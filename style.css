@@ -1,0 +1,136 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    color: black;
+    
+}
+.nav{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    text-align: center;
+    padding-top: 20px ;
+    width: 35%;
+    margin: auto;
+    padding: 20px;
+    /* border: 1px solid red; */
+}
+.nav span{
+    padding-left: 20px;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #f1f1f1;
+    /* background-color: #661b00 */
+    background-image: url(bg15.png);
+    
+
+}
+.form{
+    background-color: #ffffff;
+    margin: auto;
+    /* margin-top: 10px; */
+    padding: 20px;
+    border-radius: 5px;
+    /* position: relative; */
+    box-shadow: 10px 20px 35px rgba(0, 0, 0, 0.15);
+    width: 35%;
+    /* border: 1px solid green; */
+       
+    
+}
+.inputBox{
+    padding-top: 15px;
+    position: relative;
+    /* width: 50%; */
+    
+}
+.inputBox input{
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #616161;
+    border-radius: 5px;
+    outline: none;
+    color: black;
+    font-size: 1em;
+    
+}
+
+.fa-eye{
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    cursor: pointer;
+    color: #616161;
+}
+
+#eye-slash-pin {
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    cursor: pointer;
+    color: #616161;
+}
+#eye-slash-password {
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    cursor: pointer;
+    color: #616161;
+}
+.inputBox label{
+    position: absolute;
+    left: 0;
+    padding: 15px;
+    pointer-events: none;
+    font-size: 01em;
+    color: #616161;
+    transition: 0.5s;
+}
+.inputBox input:valid ~ label,
+.inputBox input:focus ~ label{
+    color: #616161;
+    transform: translateX(10px) translateY(-7px);
+    font-size: 0.65em;
+    padding: 0 5px;
+    background-color: #ffffff;
+    /* border-left: 1px solid;
+    border-right: 1px solid; */
+    
+}
+.submitButton{
+    padding: 15px;
+    margin-top: 25px;
+    border: 1px solid #661b00;
+    border-radius: 5px;
+    background-color: #661b00;
+    color: white;
+    
+
+    
+}
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+@media screen and (max-width: 700px){
+    .form{
+        background-color: red;
+        margin: auto;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 10px 20px 35px rgba(0, 0, 0, 0.15);
+        width: 35%;
+           
+        
+    }
+}
