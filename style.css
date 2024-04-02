@@ -11,9 +11,8 @@
     display: flex;
     justify-content:center;
     align-items: center;
-    text-align: center;
     padding-top: 20px ;
-    width: 35%;
+    width: 90%;
     margin: auto;
     padding: 20px;
     /* border: 1px solid red; */
@@ -29,7 +28,7 @@ body{
     flex-direction: column;
     background-color: #f1f1f1;
     /* background-color: #661b00 */
-    background-image: url(bg15.png);
+    background-image: url(bg15c.svg);
     
 
 }
@@ -41,7 +40,7 @@ body{
     border-radius: 5px;
     /* position: relative; */
     box-shadow: 10px 20px 35px rgba(0, 0, 0, 0.15);
-    width: 35%;
+    width: 90%;
     /* border: 1px solid green; */
        
     
@@ -122,7 +121,7 @@ body{
     margin: 0;
 }
 
-@media screen and (max-width: 700px){
+/* @media screen and (max-width: 700px){
     .form{
         background-color: red;
         margin: auto;
@@ -133,4 +132,4 @@ body{
            
         
     }
-}
+} */
