@@ -199,7 +199,7 @@ button:hover{
 .partnerCard{
     width: 100px;
     height: 60px;
-    border: 1px solid #661b00;
+    /* border: 1px solid #661b00; */
     border-radius: 5px;
     display: flex;
     justify-content: center;
@@ -208,6 +208,15 @@ button:hover{
     margin-left: 10px;
     
 }
+
+  .grayscale {
+    filter: grayscale(100%);  
+    transition: filter 0.5s ease;
+  }
+  
+  .grayscale:hover {
+    filter: none;
+  }
 
 
 
