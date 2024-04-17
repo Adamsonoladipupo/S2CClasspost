@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"> -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+            color: black;
+        }
+        nav{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            padding-top: 10px;
+            width: 300px;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: #f1f1f1;
+            
+        }
+        .form{
+            background-color: #ffffff;
+            margin: 20px;
+            /* margin-top: 10px; */
+            padding: 20px;
+            border-radius: 5px;
+            position: relative;
+            box-shadow: 10px 20px 35px rgba(0, 0, 0, 0.15);
+            
+            
+        }
+        .inputBox{
+            padding-top: 15px;
+            position: relative;
+            width: 300px;
+            
+        }
+        .inputBox input{
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #616161;
+            border-radius: 5px;
+            outline: none;
+            color: black;
+            font-size: 1em;
+            
+        }
+        
+        .fa-eye{
+            position: absolute;
+            top: 30px;
+            right: 5%;
+            cursor: pointer;
+            color: #616161;
+        }
+        .fa-eye-slash{
+            position: absolute;
+            top: 30px;
+            right: 5%;
+            cursor: pointer;
+            color: #616161;
+        }
+        .inputBox span{
+            position: absolute;
+            left: 0;
+            padding: 15px;
+            pointer-events: none;
+            font-size: 01em;
+            color: #616161;
+            transition: 0.5s;
+        }
+        .inputBox input:valid ~ span,
+        .inputBox input:focus ~ span{
+            color: #616161;
+            transform: translateX(10px) translateY(-7px);
+            font-size: 0.65em;
+            padding: 0 5px;
+            background-color: #ffffff;
+            /* border-left: 1px solid;
+            border-right: 1px solid; */
+            
+        }
+        .submitButton{
+            padding: 10px;
+            margin-top: 10px;
+            border: 1px solid orangered;
+            border-radius: 5px;
+            background-color: orangered;
+            color: white;
+
+            
+        }
+            input::-webkit-outer-spin-button,
+            input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <img src="logo.png" alt="logo" width="35px" height="35px">
+        <p>Have an account?<a href="sample1.html">  Log in</a></p>
+    </nav>
+    <div class="form">
+        <form action="" method="get">
+            <h3>Create Account</h3>
+            <p>Let's get you started in few minutes!.</p>
+            <div class="inputBox">
+                <input type="text" required="required">
+                <span>Legal First Name</span>
+            </div>
+            <div class="inputBox">
+                <input type="text" required="required">
+                <span>Legal Surame</span>
+            </div>
+            <div class="inputBox">
+                <input type="email" required="required">
+                <span>Email Address</span>
+            </div>
+            <div class="inputBox">
+                <input type="number" required="required" >
+                <span>WhatApp Number</span>
+            </div>
+            <div class="inputBox password-field">
+                <input type="password" required="required" id="mainPassword">
+                <i id="toggler"class="far fa-eye-slash"></i>
+                <span>Password</span>
+            </div>
+            <div class="inputBox password-field">
+                <input type="password" required="required" maxlength="4" size="4" id="pin" >
+                <i id="togglerPin"class="far fa-eye"></i>
+                <span>Pin (4 digits)</span>
+            </div>
+            <div class="inputBox">
+                <input type="text" >
+                <span>Referral ID (Optional)</span>
+            </div>
+            <div class="inputBox">
+                <input type="text">
+                <span>Referral Name (Optional)</span>
+            </div>
+            <div class="inputBox">
+                <input list="OnlinePlatform" name="OnlinePlatform" required="required">
+                <datalist id="OnlinePlatform">
+                    <option value="Twitter"></option>
+                    <option value="Facebook"></option>
+                    <option value="Google"></option>
+                    <option value="Instagram"></option>
+                    <option value="LinkedIn"></option>
+                    <option value="WhatsApp"></option>
+                    <option value="YouTube"></option>
+                    <option value="From a friend"></option>
+                    <option value="Others"></option>
+                </datalist>
+                <span>How did you hear about us?</span>
+            </div>
+            <div  style="display: flex; padding-top: 10px;">
+                <input type="checkbox" required="required"><p style="padding-left: 10px;">I have read and I agree to the <a href="https://gosub.ng/terms-and-conditions">T&C</a></p>
+            </div>
+            <input type="submit" value="GET STARTED" class="submitButton">
+        </form>
+    </div>
+
+
+
+
+    <script src="script.js"></script>
+    <script>
+        var password = document.getElementById('mainPassword');
+        var toggler = document.getElementById('toggler');
+        
+        
+        showHidePassword = () => {
+        if (password.type == 'password') {
+        password.setAttribute('type', 'text');
+        toggler.classList.add('fa-eye');
+        } else {
+        toggler.classList.remove('fa-eye-slash');
+        password.setAttribute('type', 'password');
+        }};
+        toggler.addEventListener('click', showHidePassword);
+
+
+
+       
+
+
+    </script>
+
+</body>
+</html>

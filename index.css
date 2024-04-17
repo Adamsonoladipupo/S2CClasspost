@@ -1,0 +1,299 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    /* color: #661b00; */
+    
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    padding: 30px 30px;
+}
+
+.container{
+    padding: 40px;
+    padding-bottom: 100px;
+    text-align: left;
+    color: #000000;
+    /* background-color: aquamarine; */
+    /* border-bottom-left-radius: 110px; */
+    
+    
+}
+.container h1{
+    padding-bottom: 20px;
+}
+
+/* button{
+    margin-top: 30px;
+    padding: 12px 30px;
+    border: 1px solid white;
+    border-radius: 5px;
+    background-color: #661b00;
+    color: white;
+} */
+button{
+    margin-top: 30px;
+    padding: 12px 30px;
+    border: 1px solid #661b00;
+    border-radius: 5px;
+    background-color: transparent;
+    color: #661b00;
+    transition: 1s;
+}
+button:hover{
+    transition: 1s;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    background-color: #661b00;
+    color: #ffffff;
+}
+
+.MainContainer{
+    background-image: url(bg15c.svg);
+    color: #661b00;
+}
+/* .textContainer h2:before{
+    content: "";
+    width: 25px;
+    height: 3px;
+    background: #661b00;
+    position:absolute;
+    left: 40px;
+    top: 590px;
+} */
+/* h1,h2,h3{
+    color: #661b00;
+} */
+.card{
+    width: 300px;
+    height: 300px;
+    margin-top: 20px;
+    padding: 20px;
+    margin-bottom: 50px;
+    display: grid;
+    justify-content:center ;
+    text-align: center;
+    align-items: center;
+    background-color: white;
+    box-shadow: 10px 20px 35px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+}
+.cardContainer{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+
+}
+.achievement{
+    background-color: #661b00;
+    color: #ffffff;
+    padding: 40px;
+    border-top-right-radius: 110px;
+}
+.achievement h2{
+    color: #f9fbfd;
+    position: relative;
+    font-size: 50px;
+    font-weight: 5000;
+    opacity: 1;
+    margin: 0;
+    display: block;
+}
+.whyGosub{
+    background-color: #661b00;
+    padding: 40px;
+    color: #ffffff;
+
+}
+
+.whyGosubCard{
+    background-color: #ffffff;
+    margin: 20px 0px;
+    padding: 10px;
+    width: fit-content;
+    height: auto;
+    color: #661b00;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 5px;
+
+}
+
+.testimony{
+    padding: 40px;
+    display:flexbox;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    
+}
+.testimonyCard{
+    margin-top: 10px;
+    width: fit-content;
+    height: auto;
+    box-shadow: 10px 20px 35px rgba(0, 0, 0, 0.15);
+    padding: 20px;
+    border-radius: 5px;
+
+}
+.achievement p{    padding-top: 10px;
+}
+.achievementCardContainer{
+    margin: 10px;
+    display:flex ;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    
+}
+.achievementCard{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 10px;
+    width: 100px;
+    height: 100px;
+    border: 1px solid #ffffff;
+    border-radius: 3px;
+}
+.achivementCard2{
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 20px 0px;
+    border-radius: 5px;
+    width:fit-content;
+    /* height: 200px; */
+    display: flex;
+    justify-content:center;
+    align-items:self-start;
+    color: #661b00;
+
+}
+.achivementCard2B{
+    margin-right: 20px;
+
+}
+.partner{
+    padding: 20px;
+    color: #661b00;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    
+}
+.partnerCard{
+    width: 100px;
+    height: 60px;
+    border: 1px solid #661b00;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-left: 10px;
+    
+}
+
+
+
+.submitButton{
+    padding: 15px;
+    margin-top: 25px;
+    border: 1px solid #661b00;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #661b00;
+    
+
+    
+}
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #661b00;
+    border-radius: 5px;
+    outline: none;
+    color: black;
+    font-size: 1em;
+}
+.footer{
+    background-color: #000000;
+    color: #ffffff;
+    padding: 40px;
+}
+.footer h4{
+    color: #f26522;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    
+}
+
+.footer p{
+    
+    margin-left: 10px;
+    margin-bottom: 5px;
+    
+}
+a{
+    text-decoration: none;
+    color: #ffffff;
+    
+}
+
+.happyCustomers{
+    width: 100px;
+    background-color: #f26522;
+    padding: 20px;
+    text-align: center;
+}
+
+@media screen and (min-width: 700px){
+        .cardContainer{
+            display:flex;
+            justify-content: space-evenly;
+            align-items: center;
+            margin: 10px;
+        
+    }
+    .testimonyCard{
+        margin-top: 10px;
+        margin: 20px;
+        width: 300px;
+        height: 400px;
+        box-shadow: 10px 20px 35px rgba(0, 0, 0, 0.15);
+        padding: 20px;
+        border-radius: 5px;
+    
+    }
+    .testimony{
+        padding: 40px;
+        margin: 10px;
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    
+        
+    }
+}
