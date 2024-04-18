@@ -11,11 +11,35 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="MainContainer">
-        <div class="nav">
-            <img src="logo 2.svg" alt="logo" style="width: 36px; height: 36px;">
-            <span><a href="#"><img src="bars-solid.svg" alt="" style="width: 25px;"></a></span>
+    <header>
+        <nav>
+            <div><a href="index.html"><img src="logo.svg" alt="logo" width="30px" class="logo"></a></div>
+            <ul class="link">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html">About</a></li>
+                <li><a href="index.html">Products</a></li>
+                <li><a href="index.html">Testimonies</a></li>
+                <li><a href="index.html">Contact</a></li>
+            </ul>
+            <div class="toggleBTN">
+                <span><a href="#"><svg width="20" viewBox="0 0 448 512" id="toggleOn"><path fill="#fff" d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg></a></span>
+                <span><a href="#"><svg width="20" viewBox="0 0 384 512" id="toggleOff" style="display: none;" ><path fill="#ffffff" d="M376.6 84.5c11.3-13.6 9.5-33.8-4.1-45.1s-33.8-9.5-45.1 4.1L192 206 56.6 43.5C45.3 29.9 25.1 28.1 11.5 39.4S-3.9 70.9 7.4 84.5L150.3 256 7.4 427.5c-11.3 13.6-9.5 33.8 4.1 45.1s33.8 9.5 45.1-4.1L192 306 327.4 468.5c11.3 13.6 31.5 15.4 45.1 4.1s15.4-31.5 4.1-45.1L233.7 256 376.6 84.5z"/></svg></a></span>
+            </div>
+        </nav>
+        <div class="dropDownMenu display ">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html">About</a></li>
+            <li><a href="index.html">Products</a></li>
+            <li><a href="index.html">Testimonies</a></li>
+            <li><a href="index.html">Contact</a></li>
+            <div class="liButton">
+                <a href="signup.html"><button>Get Started</button></a>
+                <a href="signin.html"><button>Login</button></a>
+            </div>
         </div>
+    </header>
+    <div class="MainContainer">
+        
         <div class="container">
             <h1>A better way to convert your Airtime to cash</h1>
             <p>Enjoy more benefit when you use Gosub</p>
@@ -424,6 +448,20 @@
           }
           slides[slideIndex-1].style.display = "block";  
           dots[slideIndex-1].className += " active";
+        }
+
+        // For controlling the navbar
+            const toggleBTN = document.querySelector(".toggleBTN")
+            const toggleBTNicon = document.querySelector(".toggleBTN i")
+            const dropDownMenu = document.querySelector(".dropDownMenu")
+
+            toggleBTN.onclick = function(){
+            dropDownMenu.classList.toggle("display")
+
+            const isDisplay = dropDownMenu.classList.contains
+            ("display")
+            toggleBTNicon.classList = isDisplay ? 'toggleOff' :
+            'toggleOn'
         }
         </script>
 
