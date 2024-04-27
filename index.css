@@ -14,6 +14,7 @@ header{
     padding: 0 2rem;
     position: sticky ;
     top: 0;
+    z-index: 2;
     
 
 }
@@ -59,11 +60,13 @@ nav .toggleBTN{
     display: none;
     cursor: pointer;
 }
-/* Drop down menu */
+
+/* Drop down menu styling */
+
 .dropDownMenu{
-    height: 0;
     display: none;
-    position: absolute;
+    height: 0;
+    position:absolute ;
     right: 2rem;
     top: 60px;
     width: 300px;
@@ -71,9 +74,11 @@ nav .toggleBTN{
     overflow: hidden;
     transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
+#toggleOn{
+    display: none;
+}
 .dropDownMenu.display{
-    height: auto;
-    
+    height: auto;  
 }
 .dropDownMenu li{
     padding: 0.7rem;
@@ -101,28 +106,17 @@ nav .toggleBTN{
 .liButton li button{
     display: flex;
 }
+.stockImg img{
+    width: 60%;
+}
 .container{
     padding: 40px;
-    padding-bottom: 100px;
     text-align: left;
     color: #000000;
-    /* background-color: aquamarine; */
-    /* border-bottom-left-radius: 110px; */
-    
-    
 }
 .container h1{
     padding-bottom: 20px;
 }
-
-/* button{
-    margin-top: 30px;
-    padding: 12px 30px;
-    border: 1px solid white;
-    border-radius: 5px;
-    background-color: #661b00;
-    color: white;
-} */
 button{
     margin-top: 30px;
     padding: 12px 30px;
@@ -144,55 +138,113 @@ button:hover{
     background-image: url(bg15c.svg);
     color: #661b00;
 }
-/* .textContainer h2:before{
-    content: "";
-    width: 25px;
-    height: 3px;
-    background: #661b00;
-    position:absolute;
-    left: 40px;
-    top: 590px;
-} */
-/* h1,h2,h3{
-    color: #661b00;
-} */
-.card{
-    width: 300px;
-    height: 300px;
-    margin-top: 20px;
-    padding: 20px;
-    margin-bottom: 50px;
-    display: grid;
-    justify-content:center ;
-    text-align: center;
-    align-items: center;
-    background-color: white;
-    box-shadow: 10px 20px 35px rgba(0, 0, 0, 0.15);
-    border-radius: 10px;
+
+
+/* Styling of the Our services section */
+
+.ourServicesContainer{
+    padding: 40px ;
+    
 }
-.cardContainer{
-    display:flex;
+.ourServicesCards{
+    display: flex;
+    justify-content: center;
     flex-wrap: wrap;
+    gap: 2rem;
+    margin: 50px 0 0px 0 ;
+}
+.OS-Card{
+    width: 300px;
+    padding: 20px;
+    border-radius: 10px;
+    display: grid;
     justify-content: center;
     align-items: center;
-    margin: 10px;
+    text-align: center;
+    background-color: #f5f5f5;
 
 }
+.ourServicesCardContent{
+    line-height: 1.3;
+}
+
+/* Styling of the Our achievement section */
+
 .achievement{
     background-color: #661b00;
     color: #ffffff;
     padding: 40px;
-    border-top-right-radius: 110px;
+    border-top-right-radius: 100px;
 }
+
+.achievement:before{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    margin-top: -140px;
+    content: '';
+    z-index: 1;
+    left: 0;
+    background-color: #ffffff;
+    border-bottom-left-radius: 100px;
+}
+.curveEdge{
+    width: 100px;
+    height: 100px;
+    background-color: #661b00;
+}
+
 .achievement h2{
     color: #f9fbfd;
     position: relative;
     font-size: 50px;
     font-weight: 5000;
-    opacity: 1;
     margin: 0;
     display: block;
 }
+
+.achievement p{    
+    padding-top: 10px;
+}
+.achievementCardContainer{
+    margin: 10px;
+    display:flex ;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    
+}
+.achievementCard{
+    
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 10px;
+    width: 100px;
+    height: 100px;
+    border: 1px solid #ffffff;
+    border-radius: 3px;
+}
+.achivementCard2{
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 10px 0px;
+    border-radius: 5px;
+    width:fit-content;
+    display: flexbox;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-items:self-start;
+    color: #661b00;
+
+}
+.achivementCard2B{
+    margin: 10px;
+
+}
+/* Styling our Qualification */
+
 .whyGosub{
     background-color: #661b00;
     padding: 40px;
@@ -214,10 +266,11 @@ button:hover{
     border-radius: 5px;
 
 }
+/* Styling the testimony section */
 
 .testimony{
     padding: 40px;
-    display:flexbox;
+    display: flexbox ;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
@@ -233,78 +286,137 @@ button:hover{
     border-radius: 5px;
 
 }
-.achievement p{    padding-top: 10px;
-}
-.achievementCardContainer{
-    margin: 10px;
-    display:flex ;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    padding-top: 10px;
+
+/* slide show CSS  */
     
-}
-.achievementCard{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin: 10px;
-    width: 100px;
-    height: 100px;
-    border: 1px solid #ffffff;
-    border-radius: 3px;
-}
-.achivementCard2{
-    background-color: #ffffff;
-    padding: 20px;
-    margin: 20px 0px;
-    border-radius: 5px;
-    width:fit-content;
-    /* height: 200px; */
-    display: flex;
-    justify-content:center;
-    align-items:self-start;
-    color: #661b00;
+    /* Slideshow container */
+    .slideshow-container {
+        position: relative;
+        background: #ffffff;
+      }
+      
+      /* Slides */
+      .mySlides {
+        display: none;
+        padding: 40px;
+        text-align: center;
+      }
+      
+      /* Next & previous buttons */
+      .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        margin-top: -30px;
+        padding: 16px;
+        color: #661b00;
+        font-weight: bold;
+        font-size: 20px;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+      }
+      
+      /* Position the "next button" to the right */
+      .next {
+        position: absolute;
+        right: 0;
+        border-radius: 3px 0 0 3px;
+      }
+      
+      /* On hover, add a black background color with a little bit see-through */
+      .prev:hover, .next:hover {
+        background-color: rgba(0,0,0,0.8);
+        color: white;
+      }
+      
+      /* The dot/bullet/indicator container */
+      .dot-container {
+          text-align: center;
+          padding: 20px;
+      }
+      
+      /* The dots/bullets/indicators */
+      .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #f26522;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+      }
+      
+      /* Add a background color to the active dot/circle */
+      .active, .dot:hover {
+        background-color: #661b00;
+      }
+      
+      /* Add an italic font style to all quotes */
+      q {font-style: italic;}
+      
+      /* Add a blue color to the author */
+      .author {color: cornflowerblue;}
+  
 
-}
-.achivementCard2B{
-    margin-right: 20px;
+/* Styling the Partner Section of the page  */
+        
+@keyframes slide {
 
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+    
 }
 .partner{
-    padding: 20px;
-    color: #661b00;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    
+    overflow: hidden;
+    padding: 60px;
+    white-space: nowrap;
+    position: relative;
 }
-.partnerCard{
+.partner:before,
+.partner:after{
+    position: absolute;
+    top: 0;
     width: 100px;
-    height: 60px;
-    /* border: 1px solid #661b00; */
-    border-radius: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-    margin-left: 10px;
-    
+    height: 100%;
+    content: '';
+    z-index: 2;
 }
+.partner:before{
+    left: 0;
+    background-color: #ffffff;
+}
+.partner:after{
+    right: 0;
+    background-color: #ffffff;
+}
+.partner:hover .partnerSlide{
+    animation-play-state: paused;
+}
+.partnerSlide{
+    display: inline-block;
+    animation: 35s slide infinite linear;
 
-  .grayscale {
+}
+.partnerSlide img{
+    height: 50px;
+    margin: 0 40px;
+}
+.grayscale {
     filter: grayscale(100%);  
     transition: filter 0.5s ease;
-  }
-  
-  .grayscale:hover {
+}
+
+    .grayscale:hover {
     filter: none;
-  }
+}
 
-
+/* Styling of the Submit Button */
 
 .submitButton{
     padding: 15px;
@@ -333,77 +445,6 @@ input{
     font-size: 1em;
 }
 
-/* slide show CSS  */
-    
-    /* Slideshow container */
-    .slideshow-container {
-      position: relative;
-      background: #ffffff;
-    }
-    
-    /* Slides */
-    .mySlides {
-      display: none;
-      padding: 40px;
-      text-align: center;
-    }
-    
-    /* Next & previous buttons */
-    .prev, .next {
-      cursor: pointer;
-      position: absolute;
-      top: 50%;
-      width: auto;
-      margin-top: -30px;
-      padding: 16px;
-      color: #661b00;
-      font-weight: bold;
-      font-size: 20px;
-      border-radius: 0 3px 3px 0;
-      user-select: none;
-    }
-    
-    /* Position the "next button" to the right */
-    .next {
-      position: absolute;
-      right: 0;
-      border-radius: 3px 0 0 3px;
-    }
-    
-    /* On hover, add a black background color with a little bit see-through */
-    .prev:hover, .next:hover {
-      background-color: rgba(0,0,0,0.8);
-      color: white;
-    }
-    
-    /* The dot/bullet/indicator container */
-    .dot-container {
-        text-align: center;
-        padding: 20px;
-    }
-    
-    /* The dots/bullets/indicators */
-    .dot {
-      cursor: pointer;
-      height: 15px;
-      width: 15px;
-      margin: 0 2px;
-      background-color: #f26522;
-      border-radius: 50%;
-      display: inline-block;
-      transition: background-color 0.6s ease;
-    }
-    
-    /* Add a background color to the active dot/circle */
-    .active, .dot:hover {
-      background-color: #661b00;
-    }
-    
-    /* Add an italic font style to all quotes */
-    q {font-style: italic;}
-    
-    /* Add a blue color to the author */
-    .author {color: cornflowerblue;}
 
 
 .footer{
@@ -478,6 +519,19 @@ a{
     .dropDownMenu{
         display: block;
         
+    }
+    .partnerSlide img{
+        height: 30px;
+        margin: 0 20px;
+    }
+    .partner:before,
+    .partner:after{
+        position: absolute;
+        top: 0;
+        width: 20px;
+        height: 100%;
+        content: '';
+        z-index: 1;
     }
 }
 @media screen and (max-width:575px){
