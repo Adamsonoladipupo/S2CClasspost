@@ -1,513 +1,892 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="This is the registration page for Gosub.ng, for onboarding new users to the Gosub.ng website">
-    <link rel="stylesheet" href="index.css">
+    <title>Hamburger Navbar</title>
+    <style>
+        
 
-   
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    <title>Document</title>
+/* styling Navigation Menu  */
+
+.logo{
+    margin-left: 40px;
+}
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.header{
+    position: relative;
+    position: sticky;
+    background-color: #661b00;
+    height: 60px;
+    z-index: 2;
+    
+
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px ;
+    position: sticky ;
+
+}
+
+.hamburger {
+    display: none;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #ffffff;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 50px;
+}
+
+.nav-item {
+    margin: 0 20px;
+}
+
+.nav-link{
+    color: #ffffff;
+}
+.nav-link:hover{
+    color: #f26522;
+}
+.nav-menu .nav-item a button{
+        display: none;
+}
+button {
+    margin: 20px 0 20px 0;
+    padding: 12px 40px;
+    border: 1px solid #661b00;
+    color: #661b00;
+    background-color: #ffffff;
+    transition: 1s;
+}
+button:hover {
+    color: #ffffff;
+    background-color: #661b00;
+}
+
+.I-container{
+    padding: 50px 50px;
+}
+.container p{
+    padding: 10px 0 10px 0;
+}
+.A-container{
+    padding: 0 50px;
+}
+
+/* This is for styling the Our services section  */
+
+.O-container{
+    padding: 0 50px;
+}
+.O-cards{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin: 50px 0 0px 0 ;
+}
+.o-card{
+    width: 320px;
+    height: auto;
+    padding: 20px;
+    display: grid;
+    justify-content: center;
+    align-items:center ;
+    text-align: center;
+    background-color: #efefef;
+    transition: 1s ease;
+}
+.o-card:hover{
+    background-color: #ffffff;
+    border-bottom: #661b00 1px solid;
+}
+
+/* This is for styling Achievement and Qualification section  */
+
+.curveEdge{
+    width: 100px;
+    height: 100px;
+    background-color: #661b00;
+}
+.AQ-container{
+    background-color: #661b00;
+    color: #ffffff;
+    padding: 40px;
+    border-top-right-radius: 100px;
+}
+.AQ-container:before{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    margin-top: -140px;
+    content: '';
+    z-index: 1;
+    left: 0;
+    background-color: #ffffff;
+    border-bottom-left-radius: 100px;
+}
+
+.AC-card{
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 10px 0px;
+    border-radius: 5px;
+    width:fit-content;
+    display: flexbox;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-items:self-start;
+    color: #661b00;
+}
+/* This is for styling Qualification Section */
+
+
+.Q-card{
+    background-color: #ffffff;
+    margin: 20px 0px;
+    padding: 10px;
+    width: fit-content;
+    height: auto;
+    color: #661b00;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 5px;
+}
+/* This is for styling footer Section */
+
+.footer{
+    background-color: #000000;
+    color: #ffffff;
+    padding: 40px;
+    
+}
+.footer h4{
+    color: #f26522;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    
+}
+.FooterLinks{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.footer p{
+    color: #ffffff;
+    margin-left: 10px;
+    margin-bottom: 5px;
+    
+}
+.footer a{
+    color: #ffffff;
+}
+
+.hr{
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0 20px 0;
+}
+.hr p{
+    padding: 20px 0;
+}
+
+.footerHR .hr p{
+    
+    color: #ffffff;
+}
+
+.F-newsLetter input{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #661b00;
+    border-radius: 5px;
+    outline: none;
+    color: black;
+    font-size: 1em;
+}
+
+/* Styling Partner section  */
+
+@keyframes slide {
+
+from{
+    transform: translateX(0);
+}
+to{
+    transform: translateX(-100%);
+}
+
+}
+.P-container{
+    overflow: hidden;
+    padding: 60px;
+    white-space: nowrap;
+    position: relative;
+}
+.P-container:before,
+.P-container:after{
+    position: absolute;
+    top: 0;
+    width: 100px;
+    height: 100%;
+    content: '';
+    z-index: 2;
+}
+.P-container:before{
+    left: 0;
+    background-color: #ffffff;
+}
+.P-container:after{
+    right: 0;
+    background-color: #ffffff;
+}
+.P-container:hover .P-slide{
+    animation-play-state: paused;
+}
+.P-slide img{
+    height: 50px;
+    margin: 0 40px;
+}
+.P-slide{
+    display: inline-block;
+    animation: 35s slide infinite linear;
+
+}
+.grayscale {
+    filter: grayscale(100%);  
+    transition: filter 0.5s ease;
+}
+
+    .grayscale:hover {
+    filter: none;
+}
+
+    
+        /* This is the testimony section  */
+
+        .T-wrapper i {
+          height: 50px;
+          width: 50px;
+          cursor: pointer;
+          font-size: 1.25rem;
+          position: absolute;
+          text-align: center;
+          line-height: 50px;
+          padding: 200px;
+          border-radius: 50%;
+          box-shadow: 0 3px 6px rgba(0,0,0,0.23);
+          transform: translateY(-50%);
+          transition: transform 0.1s linear;
+        }
+        .T-wrapper i:active{
+          transform: translateY(-50%) scale(0.85);
+        }
+        .T-wrapper i:first-child{
+          left: -22px;
+        }
+        .T-wrapper i:last-child{
+          right: -22px;
+        }
+        .T-wrapper .carousel{
+          display: grid;
+          grid-auto-flow: column;
+          grid-auto-columns: calc((100% / 3) - 12px);
+          overflow-x: auto;
+          scroll-snap-type: x mandatory;
+          gap: 20px;
+          border-radius: 20px;
+          scroll-behavior: smooth;
+          scrollbar-width: none;
+        
+        }
+        .carousel::-webkit-scrollbar {
+          display: none;
+        }
+        .carousel.no-transition {
+          scroll-behavior: auto;
+        }
+        .carousel.dragging {
+          scroll-snap-type: none;
+          scroll-behavior: auto;
+        }
+        .carousel.dragging .T-card {
+          cursor: grab;
+          user-select: none;
+        }
+        .carousel :where(.T-card, .img) {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .carousel .T-card {
+          scroll-snap-align: start;
+          height: 340px;
+          list-style: none;
+          background: #efefef ;
+          cursor: pointer;
+          flex-direction: column;
+          border-radius: 0px;
+          padding: 25px;
+          text-align: center;
+        }
+        a{
+            text-decoration: none;
+        }
+        .T-wrapper{
+            padding: 20px;
+          }
+          .T-wrapper .carousel {
+            grid-auto-columns: 100%;
+          }
+
+          
+
+        @media screen and (max-width: 900px) {
+          .T-wrapper .carousel {
+            grid-auto-columns: calc((100% / 2) - 9px);
+          }
+
+          .logo{
+        margin-left: 15px;
+            }
+            .nav-menu {
+                position: fixed;
+                left: 100%;
+                top: 58px;
+                flex-direction: column;
+                align-items:start ;
+                background-color: #661b00;
+                width: 100%;
+                text-align: center;
+                transition: 0.5s;
+                box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+            }
+
+            .nav-menu.active {
+                left: 0;
+            }
+
+            .nav-item {
+            
+                margin: 20px 0;
+            }
+            .nav-item .nav-link{
+            
+                margin-left: 30px;
+            }
+
+            .nav-menu .nav-item a button{
+                display:inline ;
+            }
+
+            .hamburger {
+                display: block;
+                cursor: pointer;
+            }
+
+            .hamburger.active .bar:nth-child(2) {
+                opacity: 0;
+            }
+    
+            .hamburger.active .bar:nth-child(1) {
+                -webkit-transform: translateY(8px) rotate(45deg);
+                transform: translateY(8px) rotate(45deg);
+            }
+
+            .hamburger.active .bar:nth-child(3) {
+                -webkit-transform: translateY(-8px) rotate(-45deg);
+                transform: translateY(-8px) rotate(-45deg);
+            }
+            /* Styling Partner section  */
+            .P-slide img{
+                height: 30px;
+                margin: 0 20px;
+            }
+            .P-container:before,
+            .P-container:after{
+                position: absolute;
+                top: 0;
+                width: 20px;
+                height: 100%;
+                content: '';
+                z-index: 1;
+            }
+
+
+        }
+        
+        @media screen and (max-width: 600px) {
+          .carousel .T-card{
+            background-color: #efefef;
+          }
+          
+          .FooterLinks{
+            display: grid;
+            
+            }
+        
+        }
+        
+        
+            </style>
 </head>
+
 <body>
-    <header>
-        <nav>
-            <div><a href="index.html"><img src="logo.svg" alt="logo" width="30px" class="logo"></a></div>
-            <ul class="link">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="index.html">About</a></li>
-                <li><a href="index.html">Products</a></li>
-                <li><a href="index.html">Testimonies</a></li>
-                <li><a href="#">FAQ</a></li>
-                <li><a href="index.html">Contact</a></li>
+    <!-- This is the Header and Navigation Section  -->
+
+    <header class="header">
+        <nav class="navbar">
+            <a href="index.html"><img src="logo.svg" alt="logo" width="30px" class="logo">
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Product</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Testimonies</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">FAQ</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Contect</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Log in</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link btn"><button>Get Started</button></a>
+                </li>
             </ul>
-            <div class="toggleBTN">
-                <span><a href="#"><svg width="20" viewBox="0 0 448 512" id="toggleOff" onclick="toggleElements()"><path fill="#fff" d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg></a></span>
-                <span><a href="#"><svg width="20"  viewBox="0 0 384 512" id="toggleOn" onclick="toggleElements()"><path fill="#ffffff" d="M376.6 84.5c11.3-13.6 9.5-33.8-4.1-45.1s-33.8-9.5-45.1 4.1L192 206 56.6 43.5C45.3 29.9 25.1 28.1 11.5 39.4S-3.9 70.9 7.4 84.5L150.3 256 7.4 427.5c-11.3 13.6-9.5 33.8 4.1 45.1s33.8 9.5 45.1-4.1L192 306 327.4 468.5c11.3 13.6 31.5 15.4 45.1 4.1s15.4-31.5 4.1-45.1L233.7 256 376.6 84.5z"/></svg></a></span>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
             </div>
         </nav>
-        <div class="dropDownMenu display ">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="index.html">About</a></li>
-            <li><a href="index.html">Products</a></li>
-            <li><a href="index.html">Testimonies</a></li>
-            <li><a href="#">FAQ</a></li>
-            <li><a href="index.html">Contact</a></li>
-            <div class="liButton">
-                <a href="signup.html"><button>Get Started</button></a>
-                <a href="signin.html"><button>Login</button></a>
-            </div>
-        </div>
     </header>
-    <!-- This is the introductory section -->
 
-    <div class="MainContainer">
-        <div class="container">
-            <div>
-                <h1>A better way to convert your Airtime to cash</h1>
-                <p>Enjoy more benefit when you use Gosub</p>
-                <a href="signup.html"><button>Get Started</button></a>
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="textContainer">
-            <h2 style="padding-bottom: 5px;" id="scrollDown">What is Gosub.ng?</h2>
-            <p><b>Telecommunication Solution Provider</b></p>
-            <p style="padding: 20px 0px; text-align: justify;">Gosub.ng is a platform that sells telecommunication products and services to individuals and corporate customers in Nigeria. Through our platform, anyone can buy telecommunication products or services such as data plans, airtime transfer or convert airtime to cash, and process bills payments. With our state-of-the-art automated system, your satisfaction, privacy and security are 100% guarantee</p>
-        </div>
+    <!-- This is the Introductory Section -->
+
+    <div class="I-container container">
+            <h1>A better way to convert your Airtime to cash</h1>
+            <p>Enjoy more benefit when you use Gosub</p>
+            <a href="signup.html"><button>Get Started</button></a>
     </div>
 
-    <!-- This is Our Service Section -->
+    <!-- This is the About Section -->
 
-    <div class="ourServicesContainer">
-        <h2 >Our Services</h2>
-        <div class="ourServicesCards">
-            <div class="OS-Card">
-                <div class="ourServicesCardContent">
-                    <h3 style="padding-bottom: 10px;">Data Plan Subsciption</h3>
-                    <p>We sell data plans of all major network service providers in Nigeria. When you subscribe todata plans through us, you will save ₦50 to ₦22,000 per subscription.</p>
-                    <a href="#"><button>Make your subscription</button></a>
-                </div>
-            </div>
-            <div class="OS-Card">
-                <div class="ourServicesCardContent">
-                    <h3 style="padding-bottom: 10px;">Airtime Top-up</h3>
-                    <p>We sell airtime top-up of all major network service providers in Nigeria.</p>
-                    <a href="#"><button>Make your subscription</button></a>
-                </div>
-            </div>
-            <div class="OS-Card">
-                <div class="ourServicesCardContent">
-                    <h3 style="padding-bottom: 10px;">Airtime to Cash</h3>
+    <div class="A-container container">
+        <h1>What is Gosub.ng?</h1>
+        <p><b>Telecommunication Solution Provider</b></p>
+        <p style="padding: 20px 0px; text-align: justify;">Gosub.ng is a platform that sells telecommunication products and services to individuals and corporate customers in Nigeria. Through our platform, anyone can buy telecommunication products or services such as data plans, airtime transfer or convert airtime to cash, and process bills payments. With our state-of-the-art automated system, your satisfaction, privacy andsecurity are 100% guarantee</p>
+    </div>
+
+    <!-- This is the Our Services Section -->
+    
+    <div class="O-container container">
+        <h2>Our Services</h2>
+        <div class="O-cards">
+            <div class="o-card">
+                <div class="O-cardContent">
+                    <h3>Airtime to Cash</h3>
                     <p>Our airtime to cash service allows anyone to convert their airtime to cash within 10 minutes.</p>
-                    <a href="#"><button>Make your subscription</button></a>
+                    <a href="signup.html"><button>Convert</button></a>
                 </div>
             </div>
-            <div class="OS-Card">
-                <div class="ourServicesCardContent">
-                    <h3 style="padding-bottom: 10px;">Cable TV Subscription</h3>
-                    <p>Subscribing to Cable TV plans just got easier and cheaper. Gosub.ng provides a hassle-free Cable TV subscription service at a discount rate.</p>
-                    <a href="#"><button>Make your subscription</button></a>
-                </div>
+            <div class="o-card">
+                <h3>Airtime to Cash</h3>
+                <p>Our airtime to cash service allows anyone to convert their airtime to cash within 10 minutes.</p>
+                <a href="signup.html"><button>Convert</button></a>
             </div>
-            <div class="OS-Card">
-                <div class="ourServicesCardContent">
-                    <h3 style="padding-bottom: 10px;">Bills Payment</h3>
-                    <p>We provide a hassle-free bills payment service that allows you to process various kinds of bills such as electricity bills at a discount rate.</p>
-                    <a href="#"><button>Make your subscription</button></a>
-                </div>
+            <div class="o-card">
+                <h3>Airtime to Cash</h3>
+                <p>Our airtime to cash service allows anyone to convert their airtime to cash within 10 minutes.</p>
+                <a href="signup.html"><button>Convert</button></a>
             </div>
-            <div class="OS-Card">
-                <div class="ourServicesCardContent">
-                    <h3 style="padding-bottom: 10px;">Referral</h3>
-                    <p>Gosub.ng doesn't just help you reduce the cost of digital services, it also loads residual income in your bank account when you share the platform with other people.</p>
-                    <a href="#"><button>Make your subscription</button></a>
-                </div>
+            <div class="o-card">
+                <h3>Airtime to Cash</h3>
+                <p>Our airtime to cash service allows anyone to convert their airtime to cash within 10 minutes.</p>
+                <a href="signup.html"><button>Convert</button></a>
             </div>
-        </div> 
-    </div>
+            <div class="o-card">
+                <h3>Airtime to Cash</h3>
+                <p>Our airtime to cash service allows anyone to convert their airtime to cash within 10 minutes.</p>
+                <a href="signup.html"><button>Convert</button></a>
+            </div>
+            <div class="o-card">
+                <h3>Airtime to Cash</h3>
+                <p>Our airtime to cash service allows anyone to convert their airtime to cash within 10 minutes.</p>
+                <a href="signup.html"><button>Convert</button></a>
+            </div>
+        </div>
     </div>
 
-    <!-- This is the achievement Section  -->
-    <div class="curveEdge"></div>
-    <div class="achievement">
+    <!-- This is the Achievement and Qualification Section -->
+
+    <div class="curveEdge"></div> 
+    <div class="AQ-container container">
+        <div class="AC-container">
             <h2>Faster Growth</h2>
-            <div class="achivementCard2">
-                    <div class="achivementCard2B"><i><svg width="50" viewBox="0 0 640 512"><path fill="#661b00" d="M48 48h88c13.3 0 24-10.7 24-24s-10.7-24-24-24H32C14.3 0 0 14.3 0 32V136c0 13.3 10.7 24 24 24s24-10.7 24-24V48zM175.8 224a48 48 0 1 0 0-96 48 48 0 1 0 0 96zm-26.5 32C119.9 256 96 279.9 96 309.3c0 14.7 11.9 26.7 26.7 26.7h56.1c8-34.1 32.8-61.7 65.2-73.6c-7.5-4.1-16.2-6.4-25.3-6.4H149.3zm368 80c14.7 0 26.7-11.9 26.7-26.7c0-29.5-23.9-53.3-53.3-53.3H421.3c-9.2 0-17.8 2.3-25.3 6.4c32.4 11.9 57.2 39.5 65.2 73.6h56.1zm-89.4 0c-8.6-24.3-29.9-42.6-55.9-47c-3.9-.7-7.9-1-12-1H280c-4.1 0-8.1 .3-12 1c-26 4.4-47.3 22.7-55.9 47c-2.7 7.5-4.1 15.6-4.1 24c0 13.3 10.7 24 24 24H408c13.3 0 24-10.7 24-24c0-8.4-1.4-16.5-4.1-24zM464 224a48 48 0 1 0 0-96 48 48 0 1 0 0 96zm-80-32a64 64 0 1 0 -128 0 64 64 0 1 0 128 0zM504 48h88v88c0 13.3 10.7 24 24 24s24-10.7 24-24V32c0-17.7-14.3-32-32-32H504c-13.3 0-24 10.7-24 24s10.7 24 24 24zM48 464V376c0-13.3-10.7-24-24-24s-24 10.7-24 24V480c0 17.7 14.3 32 32 32H136c13.3 0 24-10.7 24-24s-10.7-24-24-24H48zm456 0c-13.3 0-24 10.7-24 24s10.7 24 24 24H608c17.7 0 32-14.3 32-32V376c0-13.3-10.7-24-24-24s-24 10.7-24 24v88H504z"/></svg></i>
-                    </div>
-                    <h3>100k+ Happy Customers</h3>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat cumque fuga totam praesentium provident molestiae veritatis dolores. Consectetur obcaecati quos dolorum qui expedita perferendis, et dignissimos dolor. Similique, repellendus rerum! </p>
+            <div class="AC-card">
+                <div class="A-icon">
+                    <i>
+                        <svg width="50" viewBox="0 0 640 512"><path fill="#661b00" d="M48 48h88c13.3 0 24-10.7 24-24s-10.7-24-24-24H32C14.3 0 0 14.3 0 32V136c0 13.3 10.7 24 24 24s24-10.7 24-24V48zM175.8 224a48 48 0 1 0 0-96 48 48 0 1 0 0 96zm-26.5 32C119.9 256 96 279.9 96 309.3c0 14.7 11.9 26.7 26.7 26.7h56.1c8-34.1 32.8-61.7 65.2-73.6c-7.5-4.1-16.2-6.4-25.3-6.4H149.3zm368 80c14.7 0 26.7-11.9 26.7-26.7c0-29.5-23.9-53.3-53.3-53.3H421.3c-9.2 0-17.8 2.3-25.3 6.4c32.4 11.9 57.2 39.5 65.2 73.6h56.1zm-89.4 0c-8.6-24.3-29.9-42.6-55.9-47c-3.9-.7-7.9-1-12-1H280c-4.1 0-8.1 .3-12 1c-26 4.4-47.3 22.7-55.9 47c-2.7 7.5-4.1 15.6-4.1 24c0 13.3 10.7 24 24 24H408c13.3 0 24-10.7 24-24c0-8.4-1.4-16.5-4.1-24zM464 224a48 48 0 1 0 0-96 48 48 0 1 0 0 96zm-80-32a64 64 0 1 0 -128 0 64 64 0 1 0 128 0zM504 48h88v88c0 13.3 10.7 24 24 24s24-10.7 24-24V32c0-17.7-14.3-32-32-32H504c-13.3 0-24 10.7-24 24s10.7 24 24 24zM48 464V376c0-13.3-10.7-24-24-24s-24 10.7-24 24V480c0 17.7 14.3 32 32 32H136c13.3 0 24-10.7 24-24s-10.7-24-24-24H48zm456 0c-13.3 0-24 10.7-24 24s10.7 24 24 24H608c17.7 0 32-14.3 32-32V376c0-13.3-10.7-24-24-24s-24 10.7-24 24v88H504z"/></svg>
+                    </i>
+                </div>
+                <h3>100k+ Happy Customers</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat cumque fuga totam praesentium provident molestiae veritatis dolores. Consectetur obcaecati quos dolorum qui expedita perferendis, et dignissimos dolor. Similique, repellendus rerum! </p>
             </div>
-            <div class="achivementCard2">
-                    <div class="achivementCard2B"><i><svg width="50" viewBox="0 0 640 512"><path fill="#661b00" d="M48 48h88c13.3 0 24-10.7 24-24s-10.7-24-24-24H32C14.3 0 0 14.3 0 32V136c0 13.3 10.7 24 24 24s24-10.7 24-24V48zM175.8 224a48 48 0 1 0 0-96 48 48 0 1 0 0 96zm-26.5 32C119.9 256 96 279.9 96 309.3c0 14.7 11.9 26.7 26.7 26.7h56.1c8-34.1 32.8-61.7 65.2-73.6c-7.5-4.1-16.2-6.4-25.3-6.4H149.3zm368 80c14.7 0 26.7-11.9 26.7-26.7c0-29.5-23.9-53.3-53.3-53.3H421.3c-9.2 0-17.8 2.3-25.3 6.4c32.4 11.9 57.2 39.5 65.2 73.6h56.1zm-89.4 0c-8.6-24.3-29.9-42.6-55.9-47c-3.9-.7-7.9-1-12-1H280c-4.1 0-8.1 .3-12 1c-26 4.4-47.3 22.7-55.9 47c-2.7 7.5-4.1 15.6-4.1 24c0 13.3 10.7 24 24 24H408c13.3 0 24-10.7 24-24c0-8.4-1.4-16.5-4.1-24zM464 224a48 48 0 1 0 0-96 48 48 0 1 0 0 96zm-80-32a64 64 0 1 0 -128 0 64 64 0 1 0 128 0zM504 48h88v88c0 13.3 10.7 24 24 24s24-10.7 24-24V32c0-17.7-14.3-32-32-32H504c-13.3 0-24 10.7-24 24s10.7 24 24 24zM48 464V376c0-13.3-10.7-24-24-24s-24 10.7-24 24V480c0 17.7 14.3 32 32 32H136c13.3 0 24-10.7 24-24s-10.7-24-24-24H48zm456 0c-13.3 0-24 10.7-24 24s10.7 24 24 24H608c17.7 0 32-14.3 32-32V376c0-13.3-10.7-24-24-24s-24 10.7-24 24v88H504z"/></svg></i></div>
-                    <div>
-                        <h3>500k+ Transaction</h3>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat cumque fuga totam praesentium provident molestiae veritatis dolores. Consectetur obcaecati quos dolorum qui expedita perferendis, et dignissimos dolor. Similique, repellendus rerum!
-                    </div>
-                    </p>
+            <div class="AC-card">
+                <div class="A-icon">
+                    <i>
+                        <svg width="50" viewBox="0 0 640 512"><path fill="#661b00" d="M48 48h88c13.3 0 24-10.7 24-24s-10.7-24-24-24H32C14.3 0 0 14.3 0 32V136c0 13.3 10.7 24 24 24s24-10.7 24-24V48zM175.8 224a48 48 0 1 0 0-96 48 48 0 1 0 0 96zm-26.5 32C119.9 256 96 279.9 96 309.3c0 14.7 11.9 26.7 26.7 26.7h56.1c8-34.1 32.8-61.7 65.2-73.6c-7.5-4.1-16.2-6.4-25.3-6.4H149.3zm368 80c14.7 0 26.7-11.9 26.7-26.7c0-29.5-23.9-53.3-53.3-53.3H421.3c-9.2 0-17.8 2.3-25.3 6.4c32.4 11.9 57.2 39.5 65.2 73.6h56.1zm-89.4 0c-8.6-24.3-29.9-42.6-55.9-47c-3.9-.7-7.9-1-12-1H280c-4.1 0-8.1 .3-12 1c-26 4.4-47.3 22.7-55.9 47c-2.7 7.5-4.1 15.6-4.1 24c0 13.3 10.7 24 24 24H408c13.3 0 24-10.7 24-24c0-8.4-1.4-16.5-4.1-24zM464 224a48 48 0 1 0 0-96 48 48 0 1 0 0 96zm-80-32a64 64 0 1 0 -128 0 64 64 0 1 0 128 0zM504 48h88v88c0 13.3 10.7 24 24 24s24-10.7 24-24V32c0-17.7-14.3-32-32-32H504c-13.3 0-24 10.7-24 24s10.7 24 24 24zM48 464V376c0-13.3-10.7-24-24-24s-24 10.7-24 24V480c0 17.7 14.3 32 32 32H136c13.3 0 24-10.7 24-24s-10.7-24-24-24H48zm456 0c-13.3 0-24 10.7-24 24s10.7 24 24 24H608c17.7 0 32-14.3 32-32V376c0-13.3-10.7-24-24-24s-24 10.7-24 24v88H504z"/></svg>
+                    </i>
+                </div>
+                <h3>100k+ Happy Customers</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat cumque fuga totam praesentium provident molestiae veritatis dolores. Consectetur obcaecati quos dolorum qui expedita perferendis, et dignissimos dolor. Similique, repellendus rerum! </p>
             </div>
-            <h2>Trusted Partner</h2>
-            <div class="achivementCard2">
-                    <div class="achivementCard2B"><i><svg width="50" viewBox="0 0 640 512"><path fill="#661b00" d="M48 48h88c13.3 0 24-10.7 24-24s-10.7-24-24-24H32C14.3 0 0 14.3 0 32V136c0 13.3 10.7 24 24 24s24-10.7 24-24V48zM175.8 224a48 48 0 1 0 0-96 48 48 0 1 0 0 96zm-26.5 32C119.9 256 96 279.9 96 309.3c0 14.7 11.9 26.7 26.7 26.7h56.1c8-34.1 32.8-61.7 65.2-73.6c-7.5-4.1-16.2-6.4-25.3-6.4H149.3zm368 80c14.7 0 26.7-11.9 26.7-26.7c0-29.5-23.9-53.3-53.3-53.3H421.3c-9.2 0-17.8 2.3-25.3 6.4c32.4 11.9 57.2 39.5 65.2 73.6h56.1zm-89.4 0c-8.6-24.3-29.9-42.6-55.9-47c-3.9-.7-7.9-1-12-1H280c-4.1 0-8.1 .3-12 1c-26 4.4-47.3 22.7-55.9 47c-2.7 7.5-4.1 15.6-4.1 24c0 13.3 10.7 24 24 24H408c13.3 0 24-10.7 24-24c0-8.4-1.4-16.5-4.1-24zM464 224a48 48 0 1 0 0-96 48 48 0 1 0 0 96zm-80-32a64 64 0 1 0 -128 0 64 64 0 1 0 128 0zM504 48h88v88c0 13.3 10.7 24 24 24s24-10.7 24-24V32c0-17.7-14.3-32-32-32H504c-13.3 0-24 10.7-24 24s10.7 24 24 24zM48 464V376c0-13.3-10.7-24-24-24s-24 10.7-24 24V480c0 17.7 14.3 32 32 32H136c13.3 0 24-10.7 24-24s-10.7-24-24-24H48zm456 0c-13.3 0-24 10.7-24 24s10.7 24 24 24H608c17.7 0 32-14.3 32-32V376c0-13.3-10.7-24-24-24s-24 10.7-24 24v88H504z"/></svg></i></div>
-                    <div>
-                        <h3>50k+ Discount</h3>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat cumque fuga totam praesentium provident molestiae veritatis dolores. Consectetur obcaecati quos dolorum qui expedita perferendis, et dignissimos dolor. Similique, repellendus rerum!
-                    </div>
-                    </p>
-            </div>
-            <div class="achivementCard2">
-                    <div class="achivementCard2B"><i><svg width="50" viewBox="0 0 640 512"><path fill="#661b00" d="M48 48h88c13.3 0 24-10.7 24-24s-10.7-24-24-24H32C14.3 0 0 14.3 0 32V136c0 13.3 10.7 24 24 24s24-10.7 24-24V48zM175.8 224a48 48 0 1 0 0-96 48 48 0 1 0 0 96zm-26.5 32C119.9 256 96 279.9 96 309.3c0 14.7 11.9 26.7 26.7 26.7h56.1c8-34.1 32.8-61.7 65.2-73.6c-7.5-4.1-16.2-6.4-25.3-6.4H149.3zm368 80c14.7 0 26.7-11.9 26.7-26.7c0-29.5-23.9-53.3-53.3-53.3H421.3c-9.2 0-17.8 2.3-25.3 6.4c32.4 11.9 57.2 39.5 65.2 73.6h56.1zm-89.4 0c-8.6-24.3-29.9-42.6-55.9-47c-3.9-.7-7.9-1-12-1H280c-4.1 0-8.1 .3-12 1c-26 4.4-47.3 22.7-55.9 47c-2.7 7.5-4.1 15.6-4.1 24c0 13.3 10.7 24 24 24H408c13.3 0 24-10.7 24-24c0-8.4-1.4-16.5-4.1-24zM464 224a48 48 0 1 0 0-96 48 48 0 1 0 0 96zm-80-32a64 64 0 1 0 -128 0 64 64 0 1 0 128 0zM504 48h88v88c0 13.3 10.7 24 24 24s24-10.7 24-24V32c0-17.7-14.3-32-32-32H504c-13.3 0-24 10.7-24 24s10.7 24 24 24zM48 464V376c0-13.3-10.7-24-24-24s-24 10.7-24 24V480c0 17.7 14.3 32 32 32H136c13.3 0 24-10.7 24-24s-10.7-24-24-24H48zm456 0c-13.3 0-24 10.7-24 24s10.7 24 24 24H608c17.7 0 32-14.3 32-32V376c0-13.3-10.7-24-24-24s-24 10.7-24 24v88H504z"/></svg></i></div>
-                    <div>
-                        <h3>500k+ Support Assistance</h3>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat cumque fuga totam praesentium provident molestiae veritatis dolores. Consectetur obcaecati quos dolorum qui expedita perferendis, et dignissimos dolor. Similique, repellendus rerum!
-                    </div>
-                    </p>
-            </div>
-
-        <!-- This is the qualification Section  -->
-
         </div>
-        <div class="whyGosub">
-            <h2>Why Gosub?</h2>
-            <div class="whyGosubCard">
-                <div class="whyGosubImg">
+        <div class="Q-container">
+            <h2>Why Gosub</h2>
+            <div class="Q-card">
+                <div class="Q-icon">
                     <img src="image/convert.svg" alt="" style="width: 50px; margin: 15px;">
                 </div>
                 <h3>Sub-header Title</h3>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero magni incidunt vitae explicabo voluptatum quis dolor consectetur maxime enim? Quas velit vero nemo dolores maiores similique sequi veniam, vitae impedit.</p>
             </div>
-            <div class="whyGosubCard">
-                <div class="whyGosubImg" >
+            <div class="Q-card">
+                <div class="Q-icon">
                     <img src="image/convert.svg" alt="" style="width: 50px; margin: 15px;">
                 </div>
                 <h3>Sub-header Title</h3>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero magni incidunt vitae explicabo voluptatum quis dolor consectetur maxime enim? Quas velit vero nemo dolores maiores similique sequi veniam, vitae impedit.</p>
             </div>
-            <div class="whyGosubCard">
-                <div class="whyGosubImg">
-                    <img src="image/convert.svg" alt="" style="width: 50px; margin: 15px;">
-                </div>
-                <h3>Sub-header Title</h3>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero magni incidunt vitae explicabo voluptatum quis dolor consectetur maxime enim? Quas velit vero nemo dolores maiores similique sequi veniam, vitae impedit.</p>
-            </div>
-            <div class="whyGosubCard">
-                <div class="whyGosubImg" >
-                    <img src="image/convert.svg" alt="" style="width: 50px; margin: 15px;">
-                </div>
-                <h3>Sub-header Title</h3>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero magni incidunt vitae explicabo voluptatum quis dolor consectetur maxime enim? Quas velit vero nemo dolores maiores similique sequi veniam, vitae impedit.</p>
-            </div>
-            <div class="whyGosubCard">
-                <div class="whyGosubImg">
-                    <img src="image/convert.svg" alt="" style="width: 50px; margin: 15px;">
-                </div>
-                <h3>Sub-header Title</h3>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero magni incidunt vitae explicabo voluptatum quis dolor consectetur maxime enim? Quas velit vero nemo dolores maiores similique sequi veniam, vitae impedit.</p>
-            </div>
-            <div class="whyGosubCard">
-                <div class="whyGosubImg" >
+            <div class="Q-card">
+                <div class="Q-icon">
                     <img src="image/convert.svg" alt="" style="width: 50px; margin: 15px;">
                 </div>
                 <h3>Sub-header Title</h3>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero magni incidunt vitae explicabo voluptatum quis dolor consectetur maxime enim? Quas velit vero nemo dolores maiores similique sequi veniam, vitae impedit.</p>
             </div>
         </div>
-        <div class="testimonyContainer">
-            <div class="testimony">
-                <h3>Testimonies</h3>
+    </div>
+
+    <!-- This is the Testimony Section -->
+
+    <!-- <div class="T-container">
+        <h2>Testimonial</h2>
+        <div class="T-cards">
+            <div class="T-card">
+                <span class="icon"></span>
+                <p>This is the best Airtime conversion app you can ever come across, very very reliable.
+                My first experience with them is totally awesome.
+                More Grace!</p>
+                <a href="#"><p><strong>User</strong></p></a>
             </div>
         </div>
+    </div> -->
 
-        <!-- This is the testimony section  -->
 
-        <!-- Slide show  -->
-        <div class="slideshow-container">
+     <!-- This is the testimony section -->
 
-            <div class="mySlides">
-                <div class="testimonyCard">
-                    <svg style="width: 100px;" viewBox="0 0 448 512"><path fill="#661b00" d="M0 216C0 149.7 53.7 96 120 96h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V320 288 216zm256 0c0-66.3 53.7-120 120-120h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H320c-35.3 0-64-28.7-64-64V320 288 216z"/></svg>
-                    <p>This guys are the best airtime to cash app in Africa, with seemless transaction, best customer care response, I'm short of words, but they are very very good operating at world class standard.</p>
-                    <div class="review">
-                        <p style="padding-top: 10px;"><strong><a href="https://g.co/kgs/THfQRDY" style="color: #000000;">Favour Nnaoha </a></strong></p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="mySlides">
-                <div class="testimonyCard">
-                    <svg style="width: 100px;" viewBox="0 0 448 512"><path fill="#661b00" d="M0 216C0 149.7 53.7 96 120 96h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V320 288 216zm256 0c0-66.3 53.7-120 120-120h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H320c-35.3 0-64-28.7-64-64V320 288 216z"/></svg>
-                    <p>Gosub is very nice, fast and reliable……so I bought 20k airtime instead of 2k from my bank(in this sapa period  ) I was looking for where to convert it to cash when I came across gosub. Registration was so easy, took less than 10minute and I converted the airtime to cash and got paid in less than 5min 💃💃💃</p>
-                    <div class="review">
-                        <p style="padding-top: 10px;"><strong><a href="https://g.co/kgs/xL6pfWC" style="color: #000000;">Adenike Balogun </a></strong></p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="mySlides">
-                <div class="testimonyCard">
-                    <svg style="width: 100px;" viewBox="0 0 448 512"><path fill="#661b00" d="M0 216C0 149.7 53.7 96 120 96h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V320 288 216zm256 0c0-66.3 53.7-120 120-120h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H320c-35.3 0-64-28.7-64-64V320 288 216z"/></svg>
-                    <p>They are super reliable and integrity conscious. My airtime was converted to cash immediately. . I'll recommend them anytime any day.</p>
-                    <div class="review">
-                        <p style="padding-top: 10px;"><strong><a href="https://g.co/kgs/5iE8zrg" style="color: #000000;">Omoye Nancy </a></strong></p>
-                    </div>
-                </div>
-            </div>
+     <div class="T-wrapper">
+        <ul class="carousel">
+          <li class="T-card">
+              <div class="quote">
+                  <svg style="width: 100px;" viewBox="0 0 448 512"><path fill="#661b00" d="M0 216C0 149.7 53.7 96 120 96h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V320 288 216zm256 0c0-66.3 53.7-120 120-120h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H320c-35.3 0-64-28.7-64-64V320 288 216z"/></svg>
+              </div>
+              <p>This guys are the best airtime to cash app in Africa, with seemless transaction, best customer care response, I'm short of words, but they are very very good operating at world class standard.</p>
+              <span><p style="padding-top: 10px;"><strong><a href="https://g.co/kgs/THfQRDY" style="color: #000000;">Favour Nnaoha </a></strong></p></span>
+          </li>
+          <li class="T-card">
+              <div class="quote">
+                  <svg style="width: 100px;" viewBox="0 0 448 512"><path fill="#661b00" d="M0 216C0 149.7 53.7 96 120 96h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V320 288 216zm256 0c0-66.3 53.7-120 120-120h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H320c-35.3 0-64-28.7-64-64V320 288 216z"/></svg>
+              </div>
+              <p>Gosub is very nice, fast and reliable……so I bought 20k airtime instead of 2k from my bank(in this sapa period  ) I was looking for where to convert it to cash when I came across gosub. Registration was so easy, took less than 10minute and I converted the airtime to cash and got paid in less than 5min 💃💃💃</p>
+              <span><p style="padding-top: 10px;"><strong><a href="https://g.co/kgs/xL6pfWC" style="color: #000000;">Adenike Balogun </a></strong></p></span>
+          </li>
+          <li class="T-card">
+              <div class="quote">
+                  <svg style="width: 100px;" viewBox="0 0 448 512"><path fill="#661b00" d="M0 216C0 149.7 53.7 96 120 96h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V320 288 216zm256 0c0-66.3 53.7-120 120-120h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H320c-35.3 0-64-28.7-64-64V320 288 216z"/></svg>
+              </div>
+              <p>They are super reliable and integrity conscious. My airtime was converted to cash immediately. . I'll recommend them anytime any day.</p>
+              <span><p style="padding-top: 10px;"><strong><a href="https://g.co/kgs/5iE8zrg" style="color: #000000;">Omoye Nancy </a></strong></p></span>
+          </li>
+          <li class="T-card">
+              <div class="quote">
+                  <svg style="width: 100px;" viewBox="0 0 448 512"><path fill="#661b00" d="M0 216C0 149.7 53.7 96 120 96h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V320 288 216zm256 0c0-66.3 53.7-120 120-120h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H320c-35.3 0-64-28.7-64-64V320 288 216z"/></svg>
+              </div>
+              <p>This is the best Airtime conversion app you can ever come across, very very reliable.
+                  My first experience with them is totally awesome.
+                  More Grace!</p>
+              <span><p style="padding-top: 10px;"><strong><a href="https://g.co/kgs/LpmLGpe" style="color: #000000; ">Omeke Toochukwu Livinus </a></strong></p></span>
+          </li>
+          <li class="T-card">
+              <div class="quote">
+                  <svg style="width: 100px;" viewBox="0 0 448 512"><path fill="#661b00" d="M0 216C0 149.7 53.7 96 120 96h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V320 288 216zm256 0c0-66.3 53.7-120 120-120h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H320c-35.3 0-64-28.7-64-64V320 288 216z"/></svg>
+              </div>
+              <p>The best and fastest converting platform I ever come across. I mean it real... Keep on the good work</p>
+              <span><p style="padding-top: 10px;"><strong><a href="https://g.co/kgs/cLnc8ru" style="color: #000000;">Udeme Udoh </a></strong></p></span>
+          </li>
+          
+        </ul>
+      </div>
+  
+      <!-- End of the testimony Card  -->
 
-            <div class="mySlides">
-                <div class="testimonyCard">
-                    <svg style="width: 100px;" viewBox="0 0 448 512"><path fill="#661b00" d="M0 216C0 149.7 53.7 96 120 96h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V320 288 216zm256 0c0-66.3 53.7-120 120-120h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H320c-35.3 0-64-28.7-64-64V320 288 216z"/></svg>
-                    <p>This is the best Airtime conversion app you can ever come across, very very reliable.
-                    My first experience with them is totally awesome.
-                    More Grace!</p>
-                    <div class="review">
-                        <p style="padding-top: 10px;"><strong><a href="https://g.co/kgs/LpmLGpe" style="color: #000000; ">Omeke Toochukwu Livinus </a></strong></p>
-                    </div>
-                </div>
-            </div>
 
-            <div class="mySlides">
-                <div class="testimonyCard">
-                    <svg style="width: 100px;" viewBox="0 0 448 512"><path fill="#661b00" d="M0 216C0 149.7 53.7 96 120 96h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V320 288 216zm256 0c0-66.3 53.7-120 120-120h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H320c-35.3 0-64-28.7-64-64V320 288 216z"/></svg>
-                    <p>The best and fastest converting platform I ever come across. I mean it real... Keep on the good work</p>
-                    <div class="review">
-                        <p style="padding-top: 10px;"><strong><a href="https://g.co/kgs/cLnc8ru" style="color: #000000;">Udeme Udoh </a></strong></p>
-                    </div>
-                </div>
-            </div>
-            
-            <a class="prev" onclick="plusSlides(-1)">❮</a>
-            <a class="next" onclick="plusSlides(1)">❯</a>
-            
-            </div>
-            
-            <div class="dot-container">
-              <span class="dot" onclick="currentSlide(1)"></span> 
-              <span class="dot" onclick="currentSlide(2)"></span> 
-              <span class="dot" onclick="currentSlide(3)"></span> 
-              <span class="dot" onclick="currentSlide(4)"></span> 
-              <span class="dot" onclick="currentSlide(5)"></span> 
-            </div>
-        
-        <!-- This is the Trusted Partner Section of the page  -->
-
-        <div style="text-align: center; margin-top: 40px;">
-            <h2>Trusted by</h2>
+    <!-- This is the Trusted Partner Section -->
+    
+    <div style="text-align: center; margin-top: 40px;">
+        <h2>Trusted by</h2>
+    </div>
+    <div class="P-container">
+        <div class="P-slide">
+            <img src="partners/Airtel-logo.jpg" alt="" class="grayscale">
+            <img src="partners/Flutterwave_Logo.png" alt="" class="grayscale">
+            <img src="partners/MFB-667f089014bfae5d706fc620b07be2e0.png" alt="" class="grayscale">
+            <img src="partners/Paystack_Logo.png" alt="" class="grayscale">
+            <img src="partners/MTN-Logo.png" alt="" class="grayscale">
+            <img src="partners/globacom-limited-icon-2048x2048-uovm3iz4.png" alt="" class="grayscale">
+            <img src="partners/Paystack_Logo.png" alt="" class="grayscale">
+            <img src="partners/MTN-Logo.png" alt="" class="grayscale">
         </div>
-        <div class="partner">
-            <div class="partnerSlide">
-                <img src="partners/Airtel-logo.jpg" alt="" class="grayscale">
-                <img src="partners/Flutterwave_Logo.png" alt="" class="grayscale">
-                <img src="partners/MFB-667f089014bfae5d706fc620b07be2e0.png" alt="" class="grayscale">
-                <img src="partners/Paystack_Logo.png" alt="" class="grayscale">
-                <img src="partners/MTN-Logo.png" alt="" class="grayscale">
-                <img src="partners/globacom-limited-icon-2048x2048-uovm3iz4.png" alt="" class="grayscale">
-                <img src="partners/Paystack_Logo.png" alt="" class="grayscale">
-                <img src="partners/MTN-Logo.png" alt="" class="grayscale">
-            </div>
-            <div class="partnerSlide">
-                <img src="partners/Airtel-logo.jpg" alt="" class="grayscale">
-                <img src="partners/Flutterwave_Logo.png" alt="" class="grayscale">
-                <img src="partners/MFB-667f089014bfae5d706fc620b07be2e0.png" alt="" class="grayscale">
-                <img src="partners/Paystack_Logo.png" alt="" class="grayscale">
-                <img src="partners/MTN-Logo.png" alt="" class="grayscale">
-                <img src="partners/globacom-limited-icon-2048x2048-uovm3iz4.png" alt="" class="grayscale">
-                <img src="partners/Paystack_Logo.png" alt="" class="grayscale">
-                <img src="partners/MTN-Logo.png" alt="" class="grayscale">
-            </div>
+        <div class="P-slide">
+            <img src="partners/Airtel-logo.jpg" alt="" class="grayscale">
+            <img src="partners/Flutterwave_Logo.png" alt="" class="grayscale">
+            <img src="partners/MFB-667f089014bfae5d706fc620b07be2e0.png" alt="" class="grayscale">
+            <img src="partners/Paystack_Logo.png" alt="" class="grayscale">
+            <img src="partners/MTN-Logo.png" alt="" class="grayscale">
+            <img src="partners/globacom-limited-icon-2048x2048-uovm3iz4.png" alt="" class="grayscale">
+            <img src="partners/Paystack_Logo.png" alt="" class="grayscale">
+            <img src="partners/MTN-Logo.png" alt="" class="grayscale">
         </div>
+    </div>
 
-        <!-- This is the Footer Section of the page -->
+    <!-- This is the Footer Section of the page -->
 
-        <div class="footer">
-            <div class="links">
-                <h4>Help Links</h4>
-                    <p><a href="#">FAQ</a></p>
-                    <p><a href="#">Tutorials</a></p>
-                    <p><a href="#">Privacy Policy</a></p>
-                    <p><a href="#">Terms and Conditions</a></p>
-                    <p><a href="#">Support</a></p>
-                    <p><a href="#">Customer Care </a></p>
-                
-                <h4>Information </h4>
-                    <p><a href="#">Blog</a></p>
-                    <p><a href="#">About</a></p>
-                    <p><a href="#">Pricing</a></p>
-                    <p><a href="#">Services</a></p>
-                    <p><a href="#">Partner</a></p>
-                    <p><a href="#">Product</a></p>
-                
-                <h4>Connect with us on </h4>
-                    <a href="https://www.instagram.com/gosub.ng?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" ><svg width="20" viewBox="0 0 448 512"><path fill="#ffffff" d="M194.4 211.7a53.3 53.3 0 1 0 59.3 88.7 53.3 53.3 0 1 0 -59.3-88.7zm142.3-68.4c-5.2-5.2-11.5-9.3-18.4-12c-18.1-7.1-57.6-6.8-83.1-6.5c-4.1 0-7.9 .1-11.2 .1c-3.3 0-7.2 0-11.4-.1c-25.5-.3-64.8-.7-82.9 6.5c-6.9 2.7-13.1 6.8-18.4 12s-9.3 11.5-12 18.4c-7.1 18.1-6.7 57.7-6.5 83.2c0 4.1 .1 7.9 .1 11.1s0 7-.1 11.1c-.2 25.5-.6 65.1 6.5 83.2c2.7 6.9 6.8 13.1 12 18.4s11.5 9.3 18.4 12c18.1 7.1 57.6 6.8 83.1 6.5c4.1 0 7.9-.1 11.2-.1c3.3 0 7.2 0 11.4 .1c25.5 .3 64.8 .7 82.9-6.5c6.9-2.7 13.1-6.8 18.4-12s9.3-11.5 12-18.4c7.2-18 6.8-57.4 6.5-83c0-4.2-.1-8.1-.1-11.4s0-7.1 .1-11.4c.3-25.5 .7-64.9-6.5-83l0 0c-2.7-6.9-6.8-13.1-12-18.4zm-67.1 44.5A82 82 0 1 1 178.4 324.2a82 82 0 1 1 91.1-136.4zm29.2-1.3c-3.1-2.1-5.6-5.1-7.1-8.6s-1.8-7.3-1.1-11.1s2.6-7.1 5.2-9.8s6.1-4.5 9.8-5.2s7.6-.4 11.1 1.1s6.5 3.9 8.6 7s3.2 6.8 3.2 10.6c0 2.5-.5 5-1.4 7.3s-2.4 4.4-4.1 6.2s-3.9 3.2-6.2 4.2s-4.8 1.5-7.3 1.5l0 0c-3.8 0-7.5-1.1-10.6-3.2zM448 96c0-35.3-28.7-64-64-64H64C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96zM357 389c-18.7 18.7-41.4 24.6-67 25.9c-26.4 1.5-105.6 1.5-132 0c-25.6-1.3-48.3-7.2-67-25.9s-24.6-41.4-25.8-67c-1.5-26.4-1.5-105.6 0-132c1.3-25.6 7.1-48.3 25.8-67s41.5-24.6 67-25.8c26.4-1.5 105.6-1.5 132 0c25.6 1.3 48.3 7.1 67 25.8s24.6 41.4 25.8 67c1.5 26.3 1.5 105.4 0 131.9c-1.3 25.6-7.1 48.3-25.8 67z"/></svg></a>
-                    <a href="https://www.linkedin.com/company/gosubng/"><svg  width="20" viewBox="0 0 448 512"><path fill="#ffffff" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg></a>
-                    <a href="https://twitter.com/GosubNg"><svg width="20" viewBox="0 0 448 512"><path fill="#ffffff" d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm297.1 84L257.3 234.6 379.4 396H283.8L209 298.1 123.3 396H75.8l111-126.9L69.7 116h98l67.7 89.5L313.6 116h47.5zM323.3 367.6L153.4 142.9H125.1L296.9 367.6h26.3z"/></svg></a>
-                    <a href="#"><svg width="20" viewBox="0 0 448 512"><path fill="#ffffff" d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64h98.2V334.2H109.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H255V480H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64z"/></svg></a>
-                    <a href="https://t.me/gosubng"><svg width="20" viewBox="0 0 496 512"><path fill="#ffffff" d="M248 8C111 8 0 119 0 256S111 504 248 504 496 393 496 256 385 8 248 8zM363 176.7c-3.7 39.2-19.9 134.4-28.1 178.3-3.5 18.6-10.3 24.8-16.9 25.4-14.4 1.3-25.3-9.5-39.3-18.7-21.8-14.3-34.2-23.2-55.3-37.2-24.5-16.1-8.6-25 5.3-39.5 3.7-3.8 67.1-61.5 68.3-66.7 .2-.7 .3-3.1-1.2-4.4s-3.6-.8-5.1-.5q-3.3 .7-104.6 69.1-14.8 10.2-26.9 9.9c-8.9-.2-25.9-5-38.6-9.1-15.5-5-27.9-7.7-26.8-16.3q.8-6.7 18.5-13.7 108.4-47.2 144.6-62.3c68.9-28.6 83.2-33.6 92.5-33.8 2.1 0 6.6 .5 9.6 2.9a10.5 10.5 0 0 1 3.5 6.7A43.8 43.8 0 0 1 363 176.7z"/></svg></a>
-                    <a href="https://api.whatsapp.com/send/?phone=2349064172909&text&type=phone_number&app_absent=0"><svg width="20" viewBox="0 0 448 512"><path fill="#ffffff" d="M92.1 254.6c0 24.9 7 49.2 20.2 70.1l3.1 5-13.3 48.6L152 365.2l4.8 2.9c20.2 12 43.4 18.4 67.1 18.4h.1c72.6 0 133.3-59.1 133.3-131.8c0-35.2-15.2-68.3-40.1-93.2c-25-25-58-38.7-93.2-38.7c-72.7 0-131.8 59.1-131.9 131.8zM274.8 330c-12.6 1.9-22.4 .9-47.5-9.9c-36.8-15.9-61.8-51.5-66.9-58.7c-.4-.6-.7-.9-.8-1.1c-2-2.6-16.2-21.5-16.2-41c0-18.4 9-27.9 13.2-32.3c.3-.3 .5-.5 .7-.8c3.6-4 7.9-5 10.6-5c2.6 0 5.3 0 7.6 .1c.3 0 .5 0 .8 0c2.3 0 5.2 0 8.1 6.8c1.2 2.9 3 7.3 4.9 11.8c3.3 8 6.7 16.3 7.3 17.6c1 2 1.7 4.3 .3 6.9c-3.4 6.8-6.9 10.4-9.3 13c-3.1 3.2-4.5 4.7-2.3 8.6c15.3 26.3 30.6 35.4 53.9 47.1c4 2 6.3 1.7 8.6-1c2.3-2.6 9.9-11.6 12.5-15.5c2.6-4 5.3-3.3 8.9-2s23.1 10.9 27.1 12.9c.8 .4 1.5 .7 2.1 1c2.8 1.4 4.7 2.3 5.5 3.6c.9 1.9 .9 9.9-2.4 19.1c-3.3 9.3-19.1 17.7-26.7 18.8zM448 96c0-35.3-28.7-64-64-64H64C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96zM148.1 393.9L64 416l22.5-82.2c-13.9-24-21.2-51.3-21.2-79.3C65.4 167.1 136.5 96 223.9 96c42.4 0 82.2 16.5 112.2 46.5c29.9 30 47.9 69.8 47.9 112.2c0 87.4-72.7 158.5-160.1 158.5c-26.6 0-52.7-6.7-75.8-19.3z"/></svg></a>
-                
+    <div class="footer">
+        <div class="FooterLinks">
+            
+            <div class="F-contact">
+                <h2>Gosub.ng</h2>
                 <h4>Contact</h4>
-                    <div style="color: #ffffff;">
-                        <div style="display: flex; align-items: center;">
-                            <svg width="15" viewBox="0 0 512 512"><path fill="#ffffff" d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/></svg>
-                            <p>09064172909</p>
-                        </div>
-                        
-                        <div style="display: flex; align-items: center;">
-                            <svg width="15" viewBox="0 0 512 512"><path fill="#ffffff" d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/></svg>
-                            <p>contact@gosub.ng</p>
-                        </div>
-                        <div style="display: flex; align-items: center;">
-                            <svg width="15" viewBox="0 0 384 512"><path fill="#ffffff" d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/></svg>
-                            <p>Nigeria</p>
-                        </div>
+                <div style="color: #ffffff;">
+                    <div style="display: flex; align-items: center;">
+                        <svg width="15" viewBox="0 0 512 512"><path fill="#ffffff" d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/></svg>
+                        <p>09064172909</p>
                     </div>
-                <div class="newsLetter" style="margin-top: 20px;">
-                    <p style="margin-bottom: 10px;">Subscribe to our Newsleter</p>
+                    
+                    <div style="display: flex; align-items: center;">
+                        <svg width="15" viewBox="0 0 512 512"><path fill="#ffffff" d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/></svg>
+                        <p>contact@gosub.ng</p>
+                    </div>
+                    <div style="display: flex; align-items: center;">
+                        <svg width="15" viewBox="0 0 384 512"><path fill="#ffffff" d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/></svg>
+                        <p>Nigeria</p>
+                    </div>
+                </div>
+            </div>
+            <div class="F-helpLink">
+                <h4>Help Links</h4>
+                <p><a href="#">FAQ</a></p>
+                <p><a href="#">Tutorials</a></p>
+                <p><a href="#">Privacy Policy</a></p>
+                <p><a href="#">Terms and Conditions</a></p>
+                <p><a href="#">Support</a></p>
+                <p><a href="#">Customer Care </a></p>
+            </div>
+            
+            <div class="F-information">
+                <h4>Information </h4>
+                <p><a href="#">Blog</a></p>
+                <p><a href="#">About</a></p>
+                <p><a href="#">Pricing</a></p>
+                <p><a href="#">Services</a></p>
+                <p><a href="#">Partner</a></p>
+                <p><a href="#">Product</a></p>
+            </div>
+            
+            <div class="F-socialIcons">
+
+                <div class="F-newsLetter" style="margin-top: 20px;">
+                    <h4 style="margin-bottom: 10px;">Newsleter</h4>
+                    <p>Subscribe to our newsletter </p>
                     <input type="text" placeholder="coming soon"><br>
                     <a href="#"><button style="margin-top: 10px; background-color: #f26522;">Subscribe</button></a>
                 </div>
+
+                <h4 style="margin-top: -10px;">Connect with us on </h4>
+                <a href="https://www.instagram.com/gosub.ng?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" ><svg width="20" viewBox="0 0 448 512"><path fill="#ffffff" d="M194.4 211.7a53.3 53.3 0 1 0 59.3 88.7 53.3 53.3 0 1 0 -59.3-88.7zm142.3-68.4c-5.2-5.2-11.5-9.3-18.4-12c-18.1-7.1-57.6-6.8-83.1-6.5c-4.1 0-7.9 .1-11.2 .1c-3.3 0-7.2 0-11.4-.1c-25.5-.3-64.8-.7-82.9 6.5c-6.9 2.7-13.1 6.8-18.4 12s-9.3 11.5-12 18.4c-7.1 18.1-6.7 57.7-6.5 83.2c0 4.1 .1 7.9 .1 11.1s0 7-.1 11.1c-.2 25.5-.6 65.1 6.5 83.2c2.7 6.9 6.8 13.1 12 18.4s11.5 9.3 18.4 12c18.1 7.1 57.6 6.8 83.1 6.5c4.1 0 7.9-.1 11.2-.1c3.3 0 7.2 0 11.4 .1c25.5 .3 64.8 .7 82.9-6.5c6.9-2.7 13.1-6.8 18.4-12s9.3-11.5 12-18.4c7.2-18 6.8-57.4 6.5-83c0-4.2-.1-8.1-.1-11.4s0-7.1 .1-11.4c.3-25.5 .7-64.9-6.5-83l0 0c-2.7-6.9-6.8-13.1-12-18.4zm-67.1 44.5A82 82 0 1 1 178.4 324.2a82 82 0 1 1 91.1-136.4zm29.2-1.3c-3.1-2.1-5.6-5.1-7.1-8.6s-1.8-7.3-1.1-11.1s2.6-7.1 5.2-9.8s6.1-4.5 9.8-5.2s7.6-.4 11.1 1.1s6.5 3.9 8.6 7s3.2 6.8 3.2 10.6c0 2.5-.5 5-1.4 7.3s-2.4 4.4-4.1 6.2s-3.9 3.2-6.2 4.2s-4.8 1.5-7.3 1.5l0 0c-3.8 0-7.5-1.1-10.6-3.2zM448 96c0-35.3-28.7-64-64-64H64C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96zM357 389c-18.7 18.7-41.4 24.6-67 25.9c-26.4 1.5-105.6 1.5-132 0c-25.6-1.3-48.3-7.2-67-25.9s-24.6-41.4-25.8-67c-1.5-26.4-1.5-105.6 0-132c1.3-25.6 7.1-48.3 25.8-67s41.5-24.6 67-25.8c26.4-1.5 105.6-1.5 132 0c25.6 1.3 48.3 7.1 67 25.8s24.6 41.4 25.8 67c1.5 26.3 1.5 105.4 0 131.9c-1.3 25.6-7.1 48.3-25.8 67z"/></svg></a>
+                <a href="https://www.linkedin.com/company/gosubng/"><svg  width="20" viewBox="0 0 448 512"><path fill="#ffffff" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg></a>
+                <a href="https://twitter.com/GosubNg"><svg width="20" viewBox="0 0 448 512"><path fill="#ffffff" d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm297.1 84L257.3 234.6 379.4 396H283.8L209 298.1 123.3 396H75.8l111-126.9L69.7 116h98l67.7 89.5L313.6 116h47.5zM323.3 367.6L153.4 142.9H125.1L296.9 367.6h26.3z"/></svg></a>
+                <a href="#"><svg width="20" viewBox="0 0 448 512"><path fill="#ffffff" d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64h98.2V334.2H109.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H255V480H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64z"/></svg></a>
+                <a href="https://t.me/gosubng"><svg width="20" viewBox="0 0 496 512"><path fill="#ffffff" d="M248 8C111 8 0 119 0 256S111 504 248 504 496 393 496 256 385 8 248 8zM363 176.7c-3.7 39.2-19.9 134.4-28.1 178.3-3.5 18.6-10.3 24.8-16.9 25.4-14.4 1.3-25.3-9.5-39.3-18.7-21.8-14.3-34.2-23.2-55.3-37.2-24.5-16.1-8.6-25 5.3-39.5 3.7-3.8 67.1-61.5 68.3-66.7 .2-.7 .3-3.1-1.2-4.4s-3.6-.8-5.1-.5q-3.3 .7-104.6 69.1-14.8 10.2-26.9 9.9c-8.9-.2-25.9-5-38.6-9.1-15.5-5-27.9-7.7-26.8-16.3q.8-6.7 18.5-13.7 108.4-47.2 144.6-62.3c68.9-28.6 83.2-33.6 92.5-33.8 2.1 0 6.6 .5 9.6 2.9a10.5 10.5 0 0 1 3.5 6.7A43.8 43.8 0 0 1 363 176.7z"/></svg></a>
+                <a href="https://api.whatsapp.com/send/?phone=2349064172909&text&type=phone_number&app_absent=0"><svg width="20" viewBox="0 0 448 512"><path fill="#ffffff" d="M92.1 254.6c0 24.9 7 49.2 20.2 70.1l3.1 5-13.3 48.6L152 365.2l4.8 2.9c20.2 12 43.4 18.4 67.1 18.4h.1c72.6 0 133.3-59.1 133.3-131.8c0-35.2-15.2-68.3-40.1-93.2c-25-25-58-38.7-93.2-38.7c-72.7 0-131.8 59.1-131.9 131.8zM274.8 330c-12.6 1.9-22.4 .9-47.5-9.9c-36.8-15.9-61.8-51.5-66.9-58.7c-.4-.6-.7-.9-.8-1.1c-2-2.6-16.2-21.5-16.2-41c0-18.4 9-27.9 13.2-32.3c.3-.3 .5-.5 .7-.8c3.6-4 7.9-5 10.6-5c2.6 0 5.3 0 7.6 .1c.3 0 .5 0 .8 0c2.3 0 5.2 0 8.1 6.8c1.2 2.9 3 7.3 4.9 11.8c3.3 8 6.7 16.3 7.3 17.6c1 2 1.7 4.3 .3 6.9c-3.4 6.8-6.9 10.4-9.3 13c-3.1 3.2-4.5 4.7-2.3 8.6c15.3 26.3 30.6 35.4 53.9 47.1c4 2 6.3 1.7 8.6-1c2.3-2.6 9.9-11.6 12.5-15.5c2.6-4 5.3-3.3 8.9-2s23.1 10.9 27.1 12.9c.8 .4 1.5 .7 2.1 1c2.8 1.4 4.7 2.3 5.5 3.6c.9 1.9 .9 9.9-2.4 19.1c-3.3 9.3-19.1 17.7-26.7 18.8zM448 96c0-35.3-28.7-64-64-64H64C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96zM148.1 393.9L64 416l22.5-82.2c-13.9-24-21.2-51.3-21.2-79.3C65.4 167.1 136.5 96 223.9 96c42.4 0 82.2 16.5 112.2 46.5c29.9 30 47.9 69.8 47.9 112.2c0 87.4-72.7 158.5-160.1 158.5c-26.6 0-52.7-6.7-75.8-19.3z"/></svg></a>
             </div>
-            <hr style="border: 0.1px solid #f26522; margin: 30px -30px;">
-            <p style="text-align: center;">Copyright © 2024 Gosub.ng All Rights Reserved.</p>
+            
+            
         </div>
 
+    <div class="footerHR">
+        
+        <div class="hr">
+            <hr>
+            <p>Copyright © 2024 Gosub.ng All Rights Reserved.</p>
+        </div>
+        
+    </div>
+
     
-   
 
 
-    <!--Script  -->
-    <script>
-        function passwordFunction() {
-
-
-            var u = document.getElementById("eye-slash-password");
-                if (u.style.display === "none") {
-                u.style.display = "block";
-                } else {
-                u.style.display = "none";
-                }
-
-            var v = document.getElementById("inputPasswors");
-    
-            if (v.type === "password") {
-                v.type = "text";
-            } else {
-                v.type = "password";
-            }
-        }
-
-        
-        
-
-        function myPinFunction() {
-                var x = document.getElementById("eye-slash-pin");
-                if (x.style.display === "none") {
-                x.style.display = "block";
-                } else {
-                x.style.display = "none";
-                }
-
-                var y = document.getElementById("inputPin");
-  
-                if (y.type === "password"){
-                    y.type = "text";
-                } else {
-                    y.type = "password";
-                }
-            }
-    </script>
-    <script>
-        // HTML element where the counter will be displayed
-  var counterElement = document.getElementById("counter");
-  
-  // Initial count value
-  var count = 0;
-  
-  // Interval in milliseconds between each increment
-  var interval = 1; // Adjust this value to control the speed of increment
-  
-  // Function to update the counter
-  function updateCounter() {
-      counterElement.textContent = count;
-  }
-  
-  // Function to increment the counter
-  function incrementCounter() {
-      count++;
-      updateCounter();
-  }
-  
-  // Function to automatically increment the counter
-  function autoIncrementCounter() {
-      var incrementInterval = setInterval(function() {
-          if (count >= 1000) {
-              clearInterval(incrementInterval); // Stop incrementing when count reaches 500
-          } else {
-              incrementCounter();
-          }
-      }, interval);
-  }
-  
-  // Start automatic incrementing when the page loads
-  autoIncrementCounter();
-  
-      </script>
-
-      <!-- Slide show script -->
-      <script>
-        var slideIndex = 1;
-        showSlides(slideIndex);
-        
-        function plusSlides(n) {
-          showSlides(slideIndex += n);
-        }
-        
-        function currentSlide(n) {
-          showSlides(slideIndex = n);
-        }
-        
-        function showSlides(n) {
-          var i;
-          var slides = document.getElementsByClassName("mySlides");
-          var dots = document.getElementsByClassName("dot");
-          if (n > slides.length) {slideIndex = 1}    
-          if (n < 1) {slideIndex = slides.length}
-          for (i = 0; i < slides.length; i++) {
-              slides[i].style.display = "none";  
-          }
-          for (i = 0; i < dots.length; i++) {
-              dots[i].className = dots[i].className.replace(" active", "");
-          }
-          slides[slideIndex-1].style.display = "block";  
-          dots[slideIndex-1].className += " active";
-        }
-
-        // For controlling the navbar
-            const toggleBTN = document.querySelector(".toggleBTN")
-            // const toggleBTNicon = document.querySelector(".toggleBTN i")
-            const dropDownMenu = document.querySelector(".dropDownMenu")
-
-            toggleBTN.onclick = function(){
-            dropDownMenu.classList.toggle("display")
-
-            const isDisplay = dropDownMenu.classList.contains
-            ("display")
-            toggleBTNicon.classList = isDisplay ? 'toggleOff' :
-            'toggleOff'
-            }
-        
-        function toggleElements() {
-            var toggleOn = document.getElementById("toggleOn");
-            var toggleOff = document.getElementById("toggleOff");
-
-            if (toggleOn.style.display !== "none") {
-                toggleOn.style.display = "none";
-                toggleOff.style.display = "block";
-            } else {
-                toggleOn.style.display = "block";
-                toggleOff.style.display = "none";
-             }
-        }
-
-        <!-- Script for controlling the Nav bar -->
-            function toggleMenu() {
-              var menu = document.getElementById("navbarMenu");
-              var hamburgerIcon = document.querySelector(".hamburger-icon");
-              var closeIcon = document.querySelector(".close-icon");
-          
-              if (menu.classList.contains("active")) {
-                menu.classList.remove("active");
-                hamburgerIcon.style.display = "block";
-                closeIcon.style.display = "none";
-              } else {
-                menu.classList.add("active");
-                hamburgerIcon.style.display = "none";
-                closeIcon.style.display = "block";
-              }
-            }
-        </script>
-         
 
 </body>
+
+<script>
+    const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".nav-menu");
+const navLink = document.querySelectorAll(".nav-link");
+
+hamburger.addEventListener("click", mobileMenu);
+navLink.forEach(n => n.addEventListener("click", closeMenu));
+
+function mobileMenu() {
+    hamburger.classList.toggle("active");
+    navMenu.classList.toggle("active");
+}
+
+function closeMenu() {
+    hamburger.classList.remove("active");
+    navMenu.classList.remove("active");
+}
+</script>
+
+<script>
+    const wrapper = document.querySelector(".T-wrapper");
+const carousel = document.querySelector(".carousel");
+const firstCardWidth = carousel.querySelector(".T-card").offsetWidth;
+const arrowBtns = document.querySelectorAll(".T-wrapper i");
+const carouselChildrens = [...carousel.children];
+
+let isDragging = false, isAutoPlay = true, startX, startScrollLeft, timeoutId;
+
+// Get the number of cards that can fit in the carousel at once
+let cardPerView = Math.round(carousel.offsetWidth / firstCardWidth);
+
+// Insert copies of the last few cards to beginning of carousel for infinite scrolling
+carouselChildrens.slice(-cardPerView).reverse().forEach(card => {
+carousel.insertAdjacentHTML("afterbegin", card.outerHTML);
+});
+
+// Insert copies of the first few cards to end of carousel for infinite scrolling
+carouselChildrens.slice(0, cardPerView).forEach(card => {
+carousel.insertAdjacentHTML("beforeend", card.outerHTML);
+});
+
+// Scroll the carousel at appropriate postition to hide first few duplicate cards on Firefox
+carousel.classList.add("no-transition");
+carousel.scrollLeft = carousel.offsetWidth;
+carousel.classList.remove("no-transition");
+
+// Add event listeners for the arrow buttons to scroll the carousel left and right
+arrowBtns.forEach(btn => {
+btn.addEventListener("click", () => {
+    carousel.scrollLeft += btn.id == "left" ? -firstCardWidth : firstCardWidth;
+});
+});
+
+const dragStart = (e) => {
+isDragging = true;
+carousel.classList.add("dragging");
+// Records the initial cursor and scroll position of the carousel
+startX = e.pageX;
+startScrollLeft = carousel.scrollLeft;
+}
+
+const dragging = (e) => {
+if(!isDragging) return; // if isDragging is false return from here
+// Updates the scroll position of the carousel based on the cursor movement
+carousel.scrollLeft = startScrollLeft - (e.pageX - startX);
+}
+
+const dragStop = () => {
+isDragging = false;
+carousel.classList.remove("dragging");
+}
+
+const infiniteScroll = () => {
+// If the carousel is at the beginning, scroll to the end
+if(carousel.scrollLeft === 0) {
+    carousel.classList.add("no-transition");
+    carousel.scrollLeft = carousel.scrollWidth - (2 * carousel.offsetWidth);
+    carousel.classList.remove("no-transition");
+}
+// If the carousel is at the end, scroll to the beginning
+else if(Math.ceil(carousel.scrollLeft) === carousel.scrollWidth - carousel.offsetWidth) {
+    carousel.classList.add("no-transition");
+    carousel.scrollLeft = carousel.offsetWidth;
+    carousel.classList.remove("no-transition");
+}
+
+// Clear existing timeout & start autoplay if mouse is not hovering over carousel
+clearTimeout(timeoutId);
+if(!wrapper.matches(":hover")) autoPlay();
+}
+
+const autoPlay = () => {
+if(window.innerWidth < 80 || !isAutoPlay) return; // Return if window is smaller than 800 or isAutoPlay is false
+// Autoplay the carousel after every 2500 ms
+timeoutId = setTimeout(() => carousel.scrollLeft += firstCardWidth, 2500);
+}
+autoPlay();
+
+carousel.addEventListener("mousedown", dragStart);
+carousel.addEventListener("mousemove", dragging);
+document.addEventListener("mouseup", dragStop);
+carousel.addEventListener("scroll", infiniteScroll);
+wrapper.addEventListener("mouseenter", () => clearTimeout(timeoutId));
+wrapper.addEventListener("mouseleave", autoPlay);
+</script>
+
 </html>
