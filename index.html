@@ -17,6 +17,18 @@
     box-sizing: border-box;
 }
 
+/* Page scroll animation for styling each section */
+        .reveal{
+            position: relative;
+            transform: translateY(150px);
+            opacity: 0;
+            transition: all 2.5s ease;
+        }
+        .reveal.active{
+            transform: translateY(0px);
+            opacity: 1;
+        }
+
 /* styling Navigation Menu  */
 
 .logo{
@@ -570,194 +582,174 @@ to{
     </header>
 
     <!-- This is the Introductory Section -->
+    <section class="releal">
+        <div class="I-container container">
+                <h1>A better way to convert your Airtime to cash</h1>
+                <p>Enjoy more benefit when you use Gosub</p>
+                <a href="signup.html"><button>Get Started</button></a>
+        </div>
 
-    <div class="I-container container">
-            <h1>A better way to convert your Airtime to cash</h1>
-            <p>Enjoy more benefit when you use Gosub</p>
-            <a href="signup.html"><button>Get Started</button></a>
-    </div>
+        <!-- This is the About Section -->
 
-    <!-- This is the About Section -->
+        <div class="A-container container">
+            <h1>What is Gosub.ng?</h1>
+            <p><b>Telecommunication Solution Provider</b></p>
+            <p style="padding: 20px 0px; text-align: justify;">Gosub.ng is a platform that sells telecommunication products and services to individuals and corporate customers in Nigeria. Through our platform, anyone can buy telecommunication products or services such as data plans, airtime transfer or convert airtime to cash, and process bills payments. With our state-of-the-art automated system, your satisfaction, privacy andsecurity are 100% guarantee</p>
+        </div>
+    </section>
 
-    <div class="A-container container">
-        <h1>What is Gosub.ng?</h1>
-        <p><b>Telecommunication Solution Provider</b></p>
-        <p style="padding: 20px 0px; text-align: justify;">Gosub.ng is a platform that sells telecommunication products and services to individuals and corporate customers in Nigeria. Through our platform, anyone can buy telecommunication products or services such as data plans, airtime transfer or convert airtime to cash, and process bills payments. With our state-of-the-art automated system, your satisfaction, privacy andsecurity are 100% guarantee</p>
-    </div>
-
-    <!-- This is the Our Services Section -->
-    
-    <div class="O-container container">
-        <h2>Our Services</h2>
-        <div class="O-cards">
-            <div class="o-card">
-                <div class="O-cardContent">
+    <section class="reveal">
+            <!-- This is the Our Services Section -->
+        
+        <div class="O-container container">
+            <h2>Our Services</h2>
+            <div class="O-cards reveal">
+                <div class="o-card">
+                    <div class="O-cardContent">
+                        <h3>Airtime to Cash</h3>
+                        <p>Our airtime to cash service allows anyone to convert their airtime to cash within 10 minutes.</p>
+                        <a href="signup.html"><button>Convert</button></a>
+                    </div>
+                </div>
+                <div class="o-card ">
+                    <h3>Airtime to Cash</h3>
+                    <p>Our airtime to cash service allows anyone to convert their airtime to cash within 10 minutes.</p>
+                    <a href="signup.html"><button>Convert</button></a>
+                </div>
+                <div class="o-card">
+                    <h3>Airtime to Cash</h3>
+                    <p>Our airtime to cash service allows anyone to convert their airtime to cash within 10 minutes.</p>
+                    <a href="signup.html"><button>Convert</button></a>
+                </div>
+                <div class="o-card ">
+                    <h3>Airtime to Cash</h3>
+                    <p>Our airtime to cash service allows anyone to convert their airtime to cash within 10 minutes.</p>
+                    <a href="signup.html"><button>Convert</button></a>
+                </div>
+                <div class="o-card">
+                    <h3>Airtime to Cash</h3>
+                    <p>Our airtime to cash service allows anyone to convert their airtime to cash within 10 minutes.</p>
+                    <a href="signup.html"><button>Convert</button></a>
+                </div>
+                <div class="o-card ">
                     <h3>Airtime to Cash</h3>
                     <p>Our airtime to cash service allows anyone to convert their airtime to cash within 10 minutes.</p>
                     <a href="signup.html"><button>Convert</button></a>
                 </div>
             </div>
-            <div class="o-card">
-                <h3>Airtime to Cash</h3>
-                <p>Our airtime to cash service allows anyone to convert their airtime to cash within 10 minutes.</p>
-                <a href="signup.html"><button>Convert</button></a>
+        </div>
+    </section>
+    
+
+    <section class="reveal">
+            <!-- This is the Achievement and Qualification Section -->
+
+        <div class="curveEdge"></div> 
+        <div class="AQ-container container">
+            <h2>Faster Growth</h2>
+            <div class="AC-counter">
+                <div class="AC-counterCards counter">
+                    <span><svg height="40"  viewBox="0 0 448 512"><path fill="#661b00" d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"/></svg></span>
+                    <h2 class="count" data-count="80000">0</h2>
+                    <p>Happy Customers</p>
+                </div>
+                <div class="AC-counterCards counter">
+                    <span><svg height="40" viewBox="0 0 384 512"><path fill="#661b00" d="M14 2.2C22.5-1.7 32.5-.3 39.6 5.8L80 40.4 120.4 5.8c9-7.7 22.3-7.7 31.2 0L192 40.4 232.4 5.8c9-7.7 22.3-7.7 31.2 0L304 40.4 344.4 5.8c7.1-6.1 17.1-7.5 25.6-3.6s14 12.4 14 21.8V488c0 9.4-5.5 17.9-14 21.8s-18.5 2.5-25.6-3.6L304 471.6l-40.4 34.6c-9 7.7-22.3 7.7-31.2 0L192 471.6l-40.4 34.6c-9 7.7-22.3 7.7-31.2 0L80 471.6 39.6 506.2c-7.1 6.1-17.1 7.5-25.6 3.6S0 497.4 0 488V24C0 14.6 5.5 6.1 14 2.2zM96 144c-8.8 0-16 7.2-16 16s7.2 16 16 16H288c8.8 0 16-7.2 16-16s-7.2-16-16-16H96zM80 352c0 8.8 7.2 16 16 16H288c8.8 0 16-7.2 16-16s-7.2-16-16-16H96c-8.8 0-16 7.2-16 16zM96 240c-8.8 0-16 7.2-16 16s7.2 16 16 16H288c8.8 0 16-7.2 16-16s-7.2-16-16-16H96z"/></svg></span>
+                    <h2 class="count" data-count="500000">0</h2>
+                    <p>Customers Transactions            </p>
+                </div>
+                <div class="AC-counterCards counter">
+                    <span><svg height="40" viewBox="0 0 448 512"><path fill="#661b00" d="M0 80V229.5c0 17 6.7 33.3 18.7 45.3l176 176c25 25 65.5 25 90.5 0L418.7 317.3c25-25 25-65.5 0-90.5l-176-176c-12-12-28.3-18.7-45.3-18.7H48C21.5 32 0 53.5 0 80zm112 32a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/></svg></span>
+                    <h2 class="count" data-count="22000">0</h2>
+                    <p>Discount (up to 22k)</p>
+                </div>
+                <div class="AC-counterCards counter">
+                    <span><svg height="40" viewBox="0 0 512 512"><path fill="#661b00" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 336h24V272H216c-13.3 0-24-10.7-24-24s10.7-24 24-24h48c13.3 0 24 10.7 24 24v88h8c13.3 0 24 10.7 24 24s-10.7 24-24 24H216c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/></svg></span>
+                    <h2 class="count" data-count="25000">0</h2>
+                    <p>Support Assistance</p>
+                </div>
             </div>
-            <div class="o-card">
-                <h3>Airtime to Cash</h3>
-                <p>Our airtime to cash service allows anyone to convert their airtime to cash within 10 minutes.</p>
-                <a href="signup.html"><button>Convert</button></a>
-            </div>
-            <div class="o-card">
-                <h3>Airtime to Cash</h3>
-                <p>Our airtime to cash service allows anyone to convert their airtime to cash within 10 minutes.</p>
-                <a href="signup.html"><button>Convert</button></a>
-            </div>
-            <div class="o-card">
-                <h3>Airtime to Cash</h3>
-                <p>Our airtime to cash service allows anyone to convert their airtime to cash within 10 minutes.</p>
-                <a href="signup.html"><button>Convert</button></a>
-            </div>
-            <div class="o-card">
-                <h3>Airtime to Cash</h3>
-                <p>Our airtime to cash service allows anyone to convert their airtime to cash within 10 minutes.</p>
-                <a href="signup.html"><button>Convert</button></a>
+
+            
+                <h2>Why Gosub</h2>
+                <div class="Q-container reveal">
+                <div class="Q-card "  >
+                    <div class="Q-icon">
+                        <img src="image/convert.svg" alt="" style="width: 50px; margin: 10px;">
+                    </div>
+                    <h3>Sub-header Title</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero magni incidunt vitae explicabo voluptatum quis dolor consectetur maxime enim? Quas velit vero nemo dolores maiores similique sequi veniam, vitae impedit.</p>
+                </div>
+                <div class="Q-card ">
+                    <div class="Q-icon">
+                        <img src="image/convert.svg" alt="" style="width: 50px; margin: 10px;">
+                    </div>
+                    <h3>Sub-header Title</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero magni incidunt vitae explicabo voluptatum quis dolor consectetur maxime enim? Quas velit vero nemo dolores maiores similique sequi veniam, vitae impedit.</p>
+                </div>
+                <div class="Q-card">
+                    <div class="Q-icon">
+                        <img src="image/convert.svg" alt="" style="width: 50px; margin: 10px;">
+                    </div>
+                    <h3>Sub-header Title</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero magni incidunt vitae explicabo voluptatum quis dolor consectetur maxime enim? Quas velit vero nemo dolores maiores similique sequi veniam, vitae impedit.</p>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
+    
 
-    <!-- This is the Achievement and Qualification Section -->
+    <section class="reveal">
+            <!-- This is the testimony section -->
 
-    <div class="curveEdge"></div> 
-    <div class="AQ-container container">
-        <h2>Faster Growth</h2>
-        <div class="AC-counter">
-            <div class="AC-counterCards counter">
-                <span><svg height="40"  viewBox="0 0 448 512"><path fill="#661b00" d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"/></svg></span>
-                <h2 class="count" data-count="80000">0</h2>
-                <p>Happy Customers</p>
-            </div>
-            <div class="AC-counterCards counter">
-                <span><svg height="40" viewBox="0 0 384 512"><path fill="#661b00" d="M14 2.2C22.5-1.7 32.5-.3 39.6 5.8L80 40.4 120.4 5.8c9-7.7 22.3-7.7 31.2 0L192 40.4 232.4 5.8c9-7.7 22.3-7.7 31.2 0L304 40.4 344.4 5.8c7.1-6.1 17.1-7.5 25.6-3.6s14 12.4 14 21.8V488c0 9.4-5.5 17.9-14 21.8s-18.5 2.5-25.6-3.6L304 471.6l-40.4 34.6c-9 7.7-22.3 7.7-31.2 0L192 471.6l-40.4 34.6c-9 7.7-22.3 7.7-31.2 0L80 471.6 39.6 506.2c-7.1 6.1-17.1 7.5-25.6 3.6S0 497.4 0 488V24C0 14.6 5.5 6.1 14 2.2zM96 144c-8.8 0-16 7.2-16 16s7.2 16 16 16H288c8.8 0 16-7.2 16-16s-7.2-16-16-16H96zM80 352c0 8.8 7.2 16 16 16H288c8.8 0 16-7.2 16-16s-7.2-16-16-16H96c-8.8 0-16 7.2-16 16zM96 240c-8.8 0-16 7.2-16 16s7.2 16 16 16H288c8.8 0 16-7.2 16-16s-7.2-16-16-16H96z"/></svg></span>
-                <h2 class="count" data-count="500000">0</h2>
-                <p>Customers Transactions            </p>
-            </div>
-            <div class="AC-counterCards counter">
-                <span><svg height="40" viewBox="0 0 448 512"><path fill="#661b00" d="M0 80V229.5c0 17 6.7 33.3 18.7 45.3l176 176c25 25 65.5 25 90.5 0L418.7 317.3c25-25 25-65.5 0-90.5l-176-176c-12-12-28.3-18.7-45.3-18.7H48C21.5 32 0 53.5 0 80zm112 32a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/></svg></span>
-                <h2 class="count" data-count="22000">0</h2>
-                <p>Discount (up to 22k)</p>
-            </div>
-            <div class="AC-counterCards counter">
-                <span><svg height="40" viewBox="0 0 512 512"><path fill="#661b00" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 336h24V272H216c-13.3 0-24-10.7-24-24s10.7-24 24-24h48c13.3 0 24 10.7 24 24v88h8c13.3 0 24 10.7 24 24s-10.7 24-24 24H216c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/></svg></span>
-                <h2 class="count" data-count="25000">0</h2>
-                <p>Support Assistance</p>
-            </div>
+        <div class="T-wrapper">
+            <ul class="carousel">
+            <li class="T-card">
+                <div class="quote">
+                    <svg style="width: 100px;" viewBox="0 0 448 512"><path fill="#661b00" d="M0 216C0 149.7 53.7 96 120 96h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V320 288 216zm256 0c0-66.3 53.7-120 120-120h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H320c-35.3 0-64-28.7-64-64V320 288 216z"/></svg>
+                </div>
+                <p>This guys are the best airtime to cash app in Africa, with seemless transaction, best customer care response, I'm short of words, but they are very very good operating at world class standard.</p>
+                <span><p style="padding-top: 10px;"><strong><a href="https://g.co/kgs/THfQRDY" style="color: #000000;">Favour Nnaoha </a></strong></p></span>
+            </li>
+            <li class="T-card">
+                <div class="quote">
+                    <svg style="width: 100px;" viewBox="0 0 448 512"><path fill="#661b00" d="M0 216C0 149.7 53.7 96 120 96h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V320 288 216zm256 0c0-66.3 53.7-120 120-120h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H320c-35.3 0-64-28.7-64-64V320 288 216z"/></svg>
+                </div>
+                <p>Gosub is very nice, fast and reliable……so I bought 20k airtime instead of 2k from my bank(in this sapa period  ) I was looking for where to convert it to cash when I came across gosub. Registration was so easy, took less than 10minute and I converted the airtime to cash and got paid in less than 5min 💃💃💃</p>
+                <span><p style="padding-top: 10px;"><strong><a href="https://g.co/kgs/xL6pfWC" style="color: #000000;">Adenike Balogun </a></strong></p></span>
+            </li>
+            <li class="T-card">
+                <div class="quote">
+                    <svg style="width: 100px;" viewBox="0 0 448 512"><path fill="#661b00" d="M0 216C0 149.7 53.7 96 120 96h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V320 288 216zm256 0c0-66.3 53.7-120 120-120h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H320c-35.3 0-64-28.7-64-64V320 288 216z"/></svg>
+                </div>
+                <p>They are super reliable and integrity conscious. My airtime was converted to cash immediately. . I'll recommend them anytime any day.</p>
+                <span><p style="padding-top: 10px;"><strong><a href="https://g.co/kgs/5iE8zrg" style="color: #000000;">Omoye Nancy </a></strong></p></span>
+            </li>
+            <li class="T-card">
+                <div class="quote">
+                    <svg style="width: 100px;" viewBox="0 0 448 512"><path fill="#661b00" d="M0 216C0 149.7 53.7 96 120 96h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V320 288 216zm256 0c0-66.3 53.7-120 120-120h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H320c-35.3 0-64-28.7-64-64V320 288 216z"/></svg>
+                </div>
+                <p>This is the best Airtime conversion app you can ever come across, very very reliable.
+                    My first experience with them is totally awesome.
+                    More Grace!</p>
+                <span><p style="padding-top: 10px;"><strong><a href="https://g.co/kgs/LpmLGpe" style="color: #000000; ">Omeke Toochukwu Livinus </a></strong></p></span>
+            </li>
+            <li class="T-card">
+                <div class="quote">
+                    <svg style="width: 100px;" viewBox="0 0 448 512"><path fill="#661b00" d="M0 216C0 149.7 53.7 96 120 96h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V320 288 216zm256 0c0-66.3 53.7-120 120-120h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H320c-35.3 0-64-28.7-64-64V320 288 216z"/></svg>
+                </div>
+                <p>The best and fastest converting platform I ever come across. I mean it real... Keep on the good work</p>
+                <span><p style="padding-top: 10px;"><strong><a href="https://g.co/kgs/cLnc8ru" style="color: #000000;">Udeme Udoh </a></strong></p></span>
+            </li>
+            
+            </ul>
         </div>
+    
+        <!-- End of the testimony Card  -->
 
-        
-        <!-- <div class="AC-container">
-            <div class="AC-card">
-                <div class="A-icon">
-                    <i>
-                        <svg width="50" viewBox="0 0 640 512"><path fill="#661b00" d="M48 48h88c13.3 0 24-10.7 24-24s-10.7-24-24-24H32C14.3 0 0 14.3 0 32V136c0 13.3 10.7 24 24 24s24-10.7 24-24V48zM175.8 224a48 48 0 1 0 0-96 48 48 0 1 0 0 96zm-26.5 32C119.9 256 96 279.9 96 309.3c0 14.7 11.9 26.7 26.7 26.7h56.1c8-34.1 32.8-61.7 65.2-73.6c-7.5-4.1-16.2-6.4-25.3-6.4H149.3zm368 80c14.7 0 26.7-11.9 26.7-26.7c0-29.5-23.9-53.3-53.3-53.3H421.3c-9.2 0-17.8 2.3-25.3 6.4c32.4 11.9 57.2 39.5 65.2 73.6h56.1zm-89.4 0c-8.6-24.3-29.9-42.6-55.9-47c-3.9-.7-7.9-1-12-1H280c-4.1 0-8.1 .3-12 1c-26 4.4-47.3 22.7-55.9 47c-2.7 7.5-4.1 15.6-4.1 24c0 13.3 10.7 24 24 24H408c13.3 0 24-10.7 24-24c0-8.4-1.4-16.5-4.1-24zM464 224a48 48 0 1 0 0-96 48 48 0 1 0 0 96zm-80-32a64 64 0 1 0 -128 0 64 64 0 1 0 128 0zM504 48h88v88c0 13.3 10.7 24 24 24s24-10.7 24-24V32c0-17.7-14.3-32-32-32H504c-13.3 0-24 10.7-24 24s10.7 24 24 24zM48 464V376c0-13.3-10.7-24-24-24s-24 10.7-24 24V480c0 17.7 14.3 32 32 32H136c13.3 0 24-10.7 24-24s-10.7-24-24-24H48zm456 0c-13.3 0-24 10.7-24 24s10.7 24 24 24H608c17.7 0 32-14.3 32-32V376c0-13.3-10.7-24-24-24s-24 10.7-24 24v88H504z"/></svg>
-                    </i>
-                </div>
-                <h3>100k+ Happy Customers</h3>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat cumque fuga totam praesentium provident molestiae veritatis dolores. Consectetur obcaecati quos dolorum qui expedita perferendis, et dignissimos dolor. Similique, repellendus rerum! </p>
-            </div>
-            <div class="AC-card">
-                <div class="A-icon">
-                    <i>
-                        <svg width="50" viewBox="0 0 640 512"><path fill="#661b00" d="M48 48h88c13.3 0 24-10.7 24-24s-10.7-24-24-24H32C14.3 0 0 14.3 0 32V136c0 13.3 10.7 24 24 24s24-10.7 24-24V48zM175.8 224a48 48 0 1 0 0-96 48 48 0 1 0 0 96zm-26.5 32C119.9 256 96 279.9 96 309.3c0 14.7 11.9 26.7 26.7 26.7h56.1c8-34.1 32.8-61.7 65.2-73.6c-7.5-4.1-16.2-6.4-25.3-6.4H149.3zm368 80c14.7 0 26.7-11.9 26.7-26.7c0-29.5-23.9-53.3-53.3-53.3H421.3c-9.2 0-17.8 2.3-25.3 6.4c32.4 11.9 57.2 39.5 65.2 73.6h56.1zm-89.4 0c-8.6-24.3-29.9-42.6-55.9-47c-3.9-.7-7.9-1-12-1H280c-4.1 0-8.1 .3-12 1c-26 4.4-47.3 22.7-55.9 47c-2.7 7.5-4.1 15.6-4.1 24c0 13.3 10.7 24 24 24H408c13.3 0 24-10.7 24-24c0-8.4-1.4-16.5-4.1-24zM464 224a48 48 0 1 0 0-96 48 48 0 1 0 0 96zm-80-32a64 64 0 1 0 -128 0 64 64 0 1 0 128 0zM504 48h88v88c0 13.3 10.7 24 24 24s24-10.7 24-24V32c0-17.7-14.3-32-32-32H504c-13.3 0-24 10.7-24 24s10.7 24 24 24zM48 464V376c0-13.3-10.7-24-24-24s-24 10.7-24 24V480c0 17.7 14.3 32 32 32H136c13.3 0 24-10.7 24-24s-10.7-24-24-24H48zm456 0c-13.3 0-24 10.7-24 24s10.7 24 24 24H608c17.7 0 32-14.3 32-32V376c0-13.3-10.7-24-24-24s-24 10.7-24 24v88H504z"/></svg>
-                    </i>
-                </div>
-                <h3>100k+ Happy Customers</h3>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat cumque fuga totam praesentium provident molestiae veritatis dolores. Consectetur obcaecati quos dolorum qui expedita perferendis, et dignissimos dolor. Similique, repellendus rerum! </p>
-            </div>
-            <div class="AC-card">
-                <div class="A-icon">
-                    <i>
-                        <svg width="50" viewBox="0 0 640 512"><path fill="#661b00" d="M48 48h88c13.3 0 24-10.7 24-24s-10.7-24-24-24H32C14.3 0 0 14.3 0 32V136c0 13.3 10.7 24 24 24s24-10.7 24-24V48zM175.8 224a48 48 0 1 0 0-96 48 48 0 1 0 0 96zm-26.5 32C119.9 256 96 279.9 96 309.3c0 14.7 11.9 26.7 26.7 26.7h56.1c8-34.1 32.8-61.7 65.2-73.6c-7.5-4.1-16.2-6.4-25.3-6.4H149.3zm368 80c14.7 0 26.7-11.9 26.7-26.7c0-29.5-23.9-53.3-53.3-53.3H421.3c-9.2 0-17.8 2.3-25.3 6.4c32.4 11.9 57.2 39.5 65.2 73.6h56.1zm-89.4 0c-8.6-24.3-29.9-42.6-55.9-47c-3.9-.7-7.9-1-12-1H280c-4.1 0-8.1 .3-12 1c-26 4.4-47.3 22.7-55.9 47c-2.7 7.5-4.1 15.6-4.1 24c0 13.3 10.7 24 24 24H408c13.3 0 24-10.7 24-24c0-8.4-1.4-16.5-4.1-24zM464 224a48 48 0 1 0 0-96 48 48 0 1 0 0 96zm-80-32a64 64 0 1 0 -128 0 64 64 0 1 0 128 0zM504 48h88v88c0 13.3 10.7 24 24 24s24-10.7 24-24V32c0-17.7-14.3-32-32-32H504c-13.3 0-24 10.7-24 24s10.7 24 24 24zM48 464V376c0-13.3-10.7-24-24-24s-24 10.7-24 24V480c0 17.7 14.3 32 32 32H136c13.3 0 24-10.7 24-24s-10.7-24-24-24H48zm456 0c-13.3 0-24 10.7-24 24s10.7 24 24 24H608c17.7 0 32-14.3 32-32V376c0-13.3-10.7-24-24-24s-24 10.7-24 24v88H504z"/></svg>
-                    </i>
-                </div>
-                <h3>100k+ Happy Customers</h3>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat cumque fuga totam praesentium provident molestiae veritatis dolores. Consectetur obcaecati quos dolorum qui expedita perferendis, et dignissimos dolor. Similique, repellendus rerum! </p>
-            </div>
-        </div> -->
+    </section>
 
-        
-            <h2>Why Gosub</h2>
-            <div class="Q-container">
-            <div class="Q-card"  >
-                <div class="Q-icon">
-                    <img src="image/convert.svg" alt="" style="width: 50px; margin: 10px;">
-                </div>
-                <h3>Sub-header Title</h3>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero magni incidunt vitae explicabo voluptatum quis dolor consectetur maxime enim? Quas velit vero nemo dolores maiores similique sequi veniam, vitae impedit.</p>
-            </div>
-            <div class="Q-card">
-                <div class="Q-icon">
-                    <img src="image/convert.svg" alt="" style="width: 50px; margin: 10px;">
-                </div>
-                <h3>Sub-header Title</h3>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero magni incidunt vitae explicabo voluptatum quis dolor consectetur maxime enim? Quas velit vero nemo dolores maiores similique sequi veniam, vitae impedit.</p>
-            </div>
-            <div class="Q-card">
-                <div class="Q-icon">
-                    <img src="image/convert.svg" alt="" style="width: 50px; margin: 10px;">
-                </div>
-                <h3>Sub-header Title</h3>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero magni incidunt vitae explicabo voluptatum quis dolor consectetur maxime enim? Quas velit vero nemo dolores maiores similique sequi veniam, vitae impedit.</p>
-            </div>
-        </div>
-    </div>
-
-     <!-- This is the testimony section -->
-
-     <div class="T-wrapper">
-        <ul class="carousel">
-          <li class="T-card">
-              <div class="quote">
-                  <svg style="width: 100px;" viewBox="0 0 448 512"><path fill="#661b00" d="M0 216C0 149.7 53.7 96 120 96h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V320 288 216zm256 0c0-66.3 53.7-120 120-120h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H320c-35.3 0-64-28.7-64-64V320 288 216z"/></svg>
-              </div>
-              <p>This guys are the best airtime to cash app in Africa, with seemless transaction, best customer care response, I'm short of words, but they are very very good operating at world class standard.</p>
-              <span><p style="padding-top: 10px;"><strong><a href="https://g.co/kgs/THfQRDY" style="color: #000000;">Favour Nnaoha </a></strong></p></span>
-          </li>
-          <li class="T-card">
-              <div class="quote">
-                  <svg style="width: 100px;" viewBox="0 0 448 512"><path fill="#661b00" d="M0 216C0 149.7 53.7 96 120 96h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V320 288 216zm256 0c0-66.3 53.7-120 120-120h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H320c-35.3 0-64-28.7-64-64V320 288 216z"/></svg>
-              </div>
-              <p>Gosub is very nice, fast and reliable……so I bought 20k airtime instead of 2k from my bank(in this sapa period  ) I was looking for where to convert it to cash when I came across gosub. Registration was so easy, took less than 10minute and I converted the airtime to cash and got paid in less than 5min 💃💃💃</p>
-              <span><p style="padding-top: 10px;"><strong><a href="https://g.co/kgs/xL6pfWC" style="color: #000000;">Adenike Balogun </a></strong></p></span>
-          </li>
-          <li class="T-card">
-              <div class="quote">
-                  <svg style="width: 100px;" viewBox="0 0 448 512"><path fill="#661b00" d="M0 216C0 149.7 53.7 96 120 96h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V320 288 216zm256 0c0-66.3 53.7-120 120-120h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H320c-35.3 0-64-28.7-64-64V320 288 216z"/></svg>
-              </div>
-              <p>They are super reliable and integrity conscious. My airtime was converted to cash immediately. . I'll recommend them anytime any day.</p>
-              <span><p style="padding-top: 10px;"><strong><a href="https://g.co/kgs/5iE8zrg" style="color: #000000;">Omoye Nancy </a></strong></p></span>
-          </li>
-          <li class="T-card">
-              <div class="quote">
-                  <svg style="width: 100px;" viewBox="0 0 448 512"><path fill="#661b00" d="M0 216C0 149.7 53.7 96 120 96h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V320 288 216zm256 0c0-66.3 53.7-120 120-120h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H320c-35.3 0-64-28.7-64-64V320 288 216z"/></svg>
-              </div>
-              <p>This is the best Airtime conversion app you can ever come across, very very reliable.
-                  My first experience with them is totally awesome.
-                  More Grace!</p>
-              <span><p style="padding-top: 10px;"><strong><a href="https://g.co/kgs/LpmLGpe" style="color: #000000; ">Omeke Toochukwu Livinus </a></strong></p></span>
-          </li>
-          <li class="T-card">
-              <div class="quote">
-                  <svg style="width: 100px;" viewBox="0 0 448 512"><path fill="#661b00" d="M0 216C0 149.7 53.7 96 120 96h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V320 288 216zm256 0c0-66.3 53.7-120 120-120h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H320c-35.3 0-64-28.7-64-64V320 288 216z"/></svg>
-              </div>
-              <p>The best and fastest converting platform I ever come across. I mean it real... Keep on the good work</p>
-              <span><p style="padding-top: 10px;"><strong><a href="https://g.co/kgs/cLnc8ru" style="color: #000000;">Udeme Udoh </a></strong></p></span>
-          </li>
-          
-        </ul>
-      </div>
-  
-      <!-- End of the testimony Card  -->
-
+    
 
     <!-- This is the Trusted Partner Section -->
     
@@ -1013,6 +1005,33 @@ myNum.forEach( (myCount) => {
     updateNumber();
     
 })
+</script>
+
+<!-- This is the script for controlling the scoll animation of the page -->
+    
+<script type="text/javascript">
+    window.addEventListener('scroll', reveal);
+
+    function reveal(){
+        var reveals = document.querySelectorAll('.reveal');
+
+        for(var i = 0; i < reveals.length; i++){
+
+            var windowHeight = window.innerHeight;
+            var revealTop = reveals[i].getBoundingClientRect().top;
+            var revealPoint = 150;
+
+            if(revealTop < windowHeight - revealPoint){
+                reveals[i].classList.add('active');
+            }
+
+            else{
+                reveals[i].classList.remove('active');
+            }
+
+        }
+    }
+
 </script>
 
 </html>
