@@ -116,14 +116,18 @@ button:hover {
 }
 
 .I-container{
-    font-size: 25px;
     background-image: url(bg15c.svg);
     padding: 50px 50px 0 50px;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
+    font-size: 40px;
     
+}
+
+.I-container .hero-image img{
+    height: 600px;
+    margin: 20px 30px -5px 50px;
 }
 .I-container p{
     padding: 10px 0 10px 0;
@@ -155,6 +159,10 @@ button:hover {
     background-color: #efefef;
     transition: 1s ease;
     border-radius: 10px;
+}
+.O-icon{
+    margin: 20px;
+    
 }
 .o-card:hover{
     background-color: #ffffff;
@@ -440,16 +448,50 @@ to{
         
 
           
+        @media screen and (max-width: 1000px){
+            .I-container .hero-text h1{
+                /* line-height: 45px; */
+            }
+        }
+        @media screen and (max-width: 900px){
+            .I-container{
+    background-image: url(bg15c.svg);
+    padding: 50px 50px 0 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 30px;
+    
+}
 
+.I-container .hero-image img{
+    height: 500px;
+    margin: 20px 20px -5px 30px;
+}
+        }
         @media screen and (max-width: 800px) {
+            .I-container{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            font-size: 25px;
+            
+        }
+        .I-container .hero-image img{
+    height: 400px;
+    margin: 0px 0px -5px 0px;
+}
         
-
             /* styling testimony section */
             .T-wrapper .carousel{
                 grid-auto-columns: calc((100% / 2) - 12px);
             }
 
-
+            .I-container .hero-image img{
+                size: 200px;
+                /* display: none; */
+            }
           .logo{
             margin-left: 15px;
             }
@@ -520,6 +562,7 @@ to{
         }
         
         @media screen and (max-width: 600px) {
+           
             /* styling testimony section */
             .T-wrapper .carousel{
                 grid-auto-columns: calc((100% ) - 12px);
@@ -590,18 +633,16 @@ to{
 
     <!-- This is the Introductory Section -->
     <section class="releal">
-        
         <div class="I-container container">
             
-            <div>
+            <div class="hero-text">
                 <h1>A better way to convert your Airtime to cash</h1>
                 <p>Enjoy more benefit when you use Gosub</p>
                 <a href="signup.html"><button>Get Started</button></a>
             </div>
-            <div>
-                <img src="image/img1.png" alt="a smilling lady" style="height: 550px;">
+            <div class="hero-image">
+                <img src="image/Hero-img2.png" alt="a smilling lady" >
             </div>
-            
         </div>
 
         <!-- This is the About Section -->
@@ -620,33 +661,50 @@ to{
             <h2>Our Services</h2>
             <div class="O-cards reveal">
                 <div class="o-card">
-                    <div class="O-cardContent">
-                        <h3>Airtime to Cash</h3>
-                        <p>Our airtime to cash service allows anyone to convert their airtime to cash within 10 minutes.</p>
-                        <a href="signup.html"><button>Convert</button></a>
+                        <div class="O-icon" >
+                            <svg height="24" width="30" viewBox="0 0 640 512"><path fill="#000000" d="M54.2 202.9C123.2 136.7 216.8 96 320 96s196.8 40.7 265.8 106.9c12.8 12.2 33 11.8 45.2-.9s11.8-33-.9-45.2C549.7 79.5 440.4 32 320 32S90.3 79.5 9.8 156.7C-2.9 169-3.3 189.2 8.9 202s32.5 13.2 45.2 .9zM320 256c56.8 0 108.6 21.1 148.2 56c13.3 11.7 33.5 10.4 45.2-2.8s10.4-33.5-2.8-45.2C459.8 219.2 393 192 320 192s-139.8 27.2-190.5 72c-13.3 11.7-14.5 31.9-2.8 45.2s31.9 14.5 45.2 2.8c39.5-34.9 91.3-56 148.2-56zm64 160a64 64 0 1 0 -128 0 64 64 0 1 0 128 0z"/></svg>
+                        </div>
+                            <h3>Airtime to Cash</h3>
+                            <p>Our airtime to cash service allows anyone to convert their airtime to cash within 10 minutes.</p>
+                            <a href="signup.html"><button>Convert</button></a>
+                        
+                </div>
+                <div class="o-card ">
+                    <div class="O-icon" >
+                        <svg height="24" width="30" viewBox="0 0 640 512"><path fill="#000000" d="M54.2 202.9C123.2 136.7 216.8 96 320 96s196.8 40.7 265.8 106.9c12.8 12.2 33 11.8 45.2-.9s11.8-33-.9-45.2C549.7 79.5 440.4 32 320 32S90.3 79.5 9.8 156.7C-2.9 169-3.3 189.2 8.9 202s32.5 13.2 45.2 .9zM320 256c56.8 0 108.6 21.1 148.2 56c13.3 11.7 33.5 10.4 45.2-2.8s10.4-33.5-2.8-45.2C459.8 219.2 393 192 320 192s-139.8 27.2-190.5 72c-13.3 11.7-14.5 31.9-2.8 45.2s31.9 14.5 45.2 2.8c39.5-34.9 91.3-56 148.2-56zm64 160a64 64 0 1 0 -128 0 64 64 0 1 0 128 0z"/></svg>
                     </div>
-                </div>
-                <div class="o-card ">
                     <h3>Airtime to Cash</h3>
                     <p>Our airtime to cash service allows anyone to convert their airtime to cash within 10 minutes.</p>
                     <a href="signup.html"><button>Convert</button></a>
                 </div>
                 <div class="o-card">
+                    <div class="O-icon" >
+                        <svg height="24" width="30" viewBox="0 0 640 512"><path fill="#000000" d="M54.2 202.9C123.2 136.7 216.8 96 320 96s196.8 40.7 265.8 106.9c12.8 12.2 33 11.8 45.2-.9s11.8-33-.9-45.2C549.7 79.5 440.4 32 320 32S90.3 79.5 9.8 156.7C-2.9 169-3.3 189.2 8.9 202s32.5 13.2 45.2 .9zM320 256c56.8 0 108.6 21.1 148.2 56c13.3 11.7 33.5 10.4 45.2-2.8s10.4-33.5-2.8-45.2C459.8 219.2 393 192 320 192s-139.8 27.2-190.5 72c-13.3 11.7-14.5 31.9-2.8 45.2s31.9 14.5 45.2 2.8c39.5-34.9 91.3-56 148.2-56zm64 160a64 64 0 1 0 -128 0 64 64 0 1 0 128 0z"/></svg>
+                    </div>
                     <h3>Airtime to Cash</h3>
                     <p>Our airtime to cash service allows anyone to convert their airtime to cash within 10 minutes.</p>
                     <a href="signup.html"><button>Convert</button></a>
                 </div>
                 <div class="o-card ">
+                    <div class="O-icon" >
+                        <svg height="24" width="30" viewBox="0 0 640 512"><path fill="#000000" d="M54.2 202.9C123.2 136.7 216.8 96 320 96s196.8 40.7 265.8 106.9c12.8 12.2 33 11.8 45.2-.9s11.8-33-.9-45.2C549.7 79.5 440.4 32 320 32S90.3 79.5 9.8 156.7C-2.9 169-3.3 189.2 8.9 202s32.5 13.2 45.2 .9zM320 256c56.8 0 108.6 21.1 148.2 56c13.3 11.7 33.5 10.4 45.2-2.8s10.4-33.5-2.8-45.2C459.8 219.2 393 192 320 192s-139.8 27.2-190.5 72c-13.3 11.7-14.5 31.9-2.8 45.2s31.9 14.5 45.2 2.8c39.5-34.9 91.3-56 148.2-56zm64 160a64 64 0 1 0 -128 0 64 64 0 1 0 128 0z"/></svg>
+                    </div>
                     <h3>Airtime to Cash</h3>
                     <p>Our airtime to cash service allows anyone to convert their airtime to cash within 10 minutes.</p>
                     <a href="signup.html"><button>Convert</button></a>
                 </div>
                 <div class="o-card">
+                    <div class="O-icon" >
+                        <svg height="24" width="30" viewBox="0 0 640 512"><path fill="#000000" d="M54.2 202.9C123.2 136.7 216.8 96 320 96s196.8 40.7 265.8 106.9c12.8 12.2 33 11.8 45.2-.9s11.8-33-.9-45.2C549.7 79.5 440.4 32 320 32S90.3 79.5 9.8 156.7C-2.9 169-3.3 189.2 8.9 202s32.5 13.2 45.2 .9zM320 256c56.8 0 108.6 21.1 148.2 56c13.3 11.7 33.5 10.4 45.2-2.8s10.4-33.5-2.8-45.2C459.8 219.2 393 192 320 192s-139.8 27.2-190.5 72c-13.3 11.7-14.5 31.9-2.8 45.2s31.9 14.5 45.2 2.8c39.5-34.9 91.3-56 148.2-56zm64 160a64 64 0 1 0 -128 0 64 64 0 1 0 128 0z"/></svg>
+                    </div>
                     <h3>Airtime to Cash</h3>
                     <p>Our airtime to cash service allows anyone to convert their airtime to cash within 10 minutes.</p>
                     <a href="signup.html"><button>Convert</button></a>
                 </div>
                 <div class="o-card ">
+                    <div class="O-icon" >
+                        <svg height="24" width="30" viewBox="0 0 640 512"><path fill="#000000" d="M54.2 202.9C123.2 136.7 216.8 96 320 96s196.8 40.7 265.8 106.9c12.8 12.2 33 11.8 45.2-.9s11.8-33-.9-45.2C549.7 79.5 440.4 32 320 32S90.3 79.5 9.8 156.7C-2.9 169-3.3 189.2 8.9 202s32.5 13.2 45.2 .9zM320 256c56.8 0 108.6 21.1 148.2 56c13.3 11.7 33.5 10.4 45.2-2.8s10.4-33.5-2.8-45.2C459.8 219.2 393 192 320 192s-139.8 27.2-190.5 72c-13.3 11.7-14.5 31.9-2.8 45.2s31.9 14.5 45.2 2.8c39.5-34.9 91.3-56 148.2-56zm64 160a64 64 0 1 0 -128 0 64 64 0 1 0 128 0z"/></svg>
+                    </div>
                     <h3>Airtime to Cash</h3>
                     <p>Our airtime to cash service allows anyone to convert their airtime to cash within 10 minutes.</p>
                     <a href="signup.html"><button>Convert</button></a>
